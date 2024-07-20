@@ -15,17 +15,25 @@ namespace dl {
     class Shape : public dl::Transformable, public dl::Drawable {
 
     protected:
-        dl::Color m_color;
+        dl::Color m_fillColor;
+        dl::Color m_outlineColor;
+        float m_outlineThickness;
         dl::Vector2f m_origin;
         dl::Vector2f m_size;
 
     public:
+        Shape();
         void setFillColor(const dl::Color& color);
+        void setOutlineColor(const dl::Color& color);
+        void setOutlineThickness(float thickness);
         void setOrigin(const dl::Vector2f& origin);
 
-        virtual const dl::Vector2f& getSize();
-        virtual dl::FloatRect getLocalBounds();
-        virtual dl::FloatRect getGlobalBounds();
+        const dl::Vector2f& getSize();
+        dl::FloatRect getLocalBounds();
+        dl::FloatRect getGlobalBounds();
+        const Color &getFillColor() const;
+        const Color &getOutlineColor() const;
+        const float& getOutlineThickness();
 
 
 
