@@ -18,5 +18,8 @@ void dl::CircleShape::setRadius(float radius) {
 }
 
 void dl::CircleShape::draw(const dl::Vector2f& viewOffset) const {
-    C2D_DrawCircle(m_position.x - m_origin.x - viewOffset.x, m_position.y - m_origin.y - viewOffset.y, 0, m_radius, m_color.getColorValue(), m_color.getColorValue(), m_color.getColorValue(), m_color.getColorValue());
+    if(m_outlineThickness > 0){
+        C2D_DrawCircle(m_position.x + m_radius - m_origin.x - viewOffset.x, m_position.y + m_radius - m_origin.y - viewOffset.y, 0, m_radius, m_outlineColor.getColorValue(), m_outlineColor.getColorValue(), m_outlineColor.getColorValue(), m_outlineColor.getColorValue());
+    }
+    C2D_DrawCircle(m_position.x + m_radius - m_origin.x - viewOffset.x, m_position.y + m_radius - m_origin.y - viewOffset.y, 0, m_radius - m_outlineThickness, m_fillColor.getColorValue(), m_fillColor.getColorValue(), m_fillColor.getColorValue(), m_fillColor.getColorValue());
 }
