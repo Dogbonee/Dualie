@@ -27,8 +27,10 @@ namespace dl {
         void setOutlineColor(const dl::Color& color);
         void setOutlineThickness(float thickness);
         void setOrigin(const dl::Vector2f& origin);
+        void setOrigin(float x, float y);
 
         const dl::Vector2f& getSize();
+        const dl::Vector2f& getOrigin();
         dl::FloatRect getLocalBounds();
         dl::FloatRect getGlobalBounds();
         const Color &getFillColor() const;

@@ -15,6 +15,11 @@ void dl::Shape::setOrigin(const dl::Vector2f &origin) {
     m_origin = origin;
 }
 
+void dl::Shape::setOrigin(float x, float y)
+{
+    m_origin = dl::Vector2f(x,y);
+}
+
 dl::FloatRect dl::Shape::getLocalBounds() {
     return {dl::Vector2f(0,0) - m_origin, m_size};
 }
@@ -52,6 +57,13 @@ const dl::Color &dl::Shape::getOutlineColor() const
 const float &dl::Shape::getOutlineThickness()
 {
     return m_outlineThickness;
+}
+
+
+
+const dl::Vector2f &dl::Shape::getOrigin()
+{
+    return m_origin;
 }
 
 

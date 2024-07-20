@@ -39,6 +39,12 @@ public:
     dl::Vector2<T> operator/(dl::Vector2<T> vector) const {
         return dl::Vector2<T>(this->x / vector.x, this->y / vector.y);
     }
+    bool operator==(dl::Vector2<T> vector) const {
+        return (this->x == vector.x) && (this->y == vector.y);
+    }
+    bool operator!=(dl::Vector2<T> vector) const {
+        return (this->x != vector.x) || (this->y != vector.y);
+    }
 
     std::string toString() const {
         return "(" + std::to_string((int)x) + ", " + std::to_string((int)y) + ")";

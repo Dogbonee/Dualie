@@ -21,6 +21,8 @@ class Text : public dl::Transformable, public dl::Drawable
 
         std::string m_textString;
 
+        dl::Vector2f m_origin;
+
     public:
         Text();
         ~Text();
@@ -29,6 +31,10 @@ class Text : public dl::Transformable, public dl::Drawable
         const std::string &getString();
 
         float getWidth();
+
+        void setOrigin(const dl::Vector2f& origin);
+        void setOrigin(float x, float y);
+        const dl::Vector2f& getOrigin();
 
         void draw(const dl::Vector2f &viewOffset) const override;
 

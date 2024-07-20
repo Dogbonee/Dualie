@@ -20,7 +20,7 @@ dl::Text::~Text()
 
 void dl::Text::draw(const dl::Vector2f &viewOffset) const
 {
-    C2D_DrawText(&m_textBuf, 0, m_position.x, m_position.y, 0, 1,1);
+    C2D_DrawText(&m_textBuf, 0, m_position.x - m_origin.x, m_position.y - m_origin.y, 0, 1,1);
 }
 
 
@@ -39,6 +39,21 @@ const std::string &dl::Text::getString()
 float dl::Text::getWidth()
 {
     return m_textBuf.width;
+}
+
+void dl::Text::setOrigin(const dl::Vector2f &origin)
+{
+    m_origin = origin;
+}
+
+void dl::Text::setOrigin(float x, float y)
+{
+    m_origin = dl::Vector2f(x,y);
+}
+
+const dl::Vector2f &dl::Text::getOrigin()
+{
+    return m_origin;
 }
 
 
