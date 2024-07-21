@@ -4,7 +4,7 @@
 
 #include <Dualie/Graphics/Text.hpp>
 
-dl::Text::Text(const dl::TextBuffer &textBuffer) : m_scale(1.0f, 1.0f)
+dl::Text::Text(const dl::TextBuffer &textBuffer) : m_scale(1.0f, 1.0f), m_alignment(AlignCenter)
 {
     p_buf = textBuffer.m_buffer;
     m_defaultFont = C2D_FontLoadSystem(CFG_REGION_USA);
@@ -20,7 +20,7 @@ dl::Text::~Text()
 
 void dl::Text::draw(const dl::Vector2f &viewOffset) const
 {
-    C2D_DrawText(&m_textBuf, C2D_AlignCenter, m_position.x - m_origin.x, m_position.y - m_origin.y, 0, m_scale.x, m_scale.y);
+    C2D_DrawText(&m_textBuf, m_alignment, m_position.x - m_origin.x, m_position.y - m_origin.y, 0, m_scale.x, m_scale.y);
 }
 
 
@@ -67,6 +67,16 @@ const dl::Vector2f &dl::Text::getOrigin()
 const dl::Vector2f &dl::Text::getScale()
 {
     return m_scale;
+}
+
+void dl::Text::updateDynamicText()
+{
+    setString(m_textString);
+}
+
+void dl::Text::setAlignment(dl::TextAlignment alignment)
+{
+    m_alignment = alignment;
 }
 
 

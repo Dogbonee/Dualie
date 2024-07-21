@@ -17,6 +17,8 @@ namespace dl
         explicit TextBuffer(size_t bufSize);
         ~TextBuffer();
 
+        void flushBuffer();
+
         friend class Text;
     };
 

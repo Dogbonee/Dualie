@@ -14,4 +14,9 @@ dl::TextBuffer::~TextBuffer()
     C2D_TextBufDelete(m_buffer);
 }
 
+void dl::TextBuffer::flushBuffer()
+{
+    C2D_TextBufClear(m_buffer);
+}
+
 
