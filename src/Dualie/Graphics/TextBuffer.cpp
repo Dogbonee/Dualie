@@ -9,4 +9,9 @@ dl::TextBuffer::TextBuffer(size_t bufSize)
     m_buffer = C2D_TextBufNew(bufSize);
 }
 
+dl::TextBuffer::~TextBuffer()
+{
+    C2D_TextBufDelete(m_buffer);
+}
+
 
