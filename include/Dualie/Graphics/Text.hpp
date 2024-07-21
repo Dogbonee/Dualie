@@ -7,6 +7,7 @@
 #include <citro2d.h>
 #include <Dualie/Graphics/Transformable.hpp>
 #include <Dualie/Graphics/Drawable.hpp>
+#include <Dualie/Graphics/TextBuffer.hpp>
 
 
 
@@ -14,7 +15,7 @@ namespace dl
 {
 class Text : public dl::Transformable, public dl::Drawable
     {
-        C2D_TextBuf m_staticBuf;
+        C2D_TextBuf p_buf;
         C2D_Text m_textBuf;
         C2D_Font m_defaultFont;
         C2D_Font m_customFont;
@@ -23,18 +24,23 @@ class Text : public dl::Transformable, public dl::Drawable
 
         dl::Vector2f m_origin;
 
+        dl::Vector2f m_scale;
+
     public:
-        Text();
+        explicit Text(const dl::TextBuffer& textBuffer);
         ~Text();
 
         void setString(std::string str);
-        const std::string &getString();
+        void setScale(const dl::Vector2f& scale);
 
-        float getWidth();
 
         void setOrigin(const dl::Vector2f& origin);
         void setOrigin(float x, float y);
+
+        const std::string &getString();
+        float getWidth();
         const dl::Vector2f& getOrigin();
+        const dl::Vector2f& getScale();
 
         void draw(const dl::Vector2f &viewOffset) const override;
 

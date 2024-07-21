@@ -4,9 +4,9 @@
 
 #include <Dualie/Graphics/Text.hpp>
 
-dl::Text::Text()
+dl::Text::Text(const dl::TextBuffer &textBuffer) : m_scale(1.0f, 1.0f)
 {
-    m_staticBuf = C2D_TextBufNew(4096);
+    p_buf = textBuffer.m_buffer;
     m_defaultFont = C2D_FontLoadSystem(CFG_REGION_USA);
 
 }
@@ -14,31 +14,26 @@ dl::Text::Text()
 
 dl::Text::~Text()
 {
-    C2D_TextBufDelete(m_staticBuf);
+
     C2D_FontFree(m_defaultFont);
 }
 
 void dl::Text::draw(const dl::Vector2f &viewOffset) const
 {
-    C2D_DrawText(&m_textBuf, 0, m_position.x - m_origin.x, m_position.y - m_origin.y, 0, 1,1);
+    C2D_DrawText(&m_textBuf, C2D_AlignCenter, m_position.x - m_origin.x, m_position.y - m_origin.y, 0, m_scale.x, m_scale.y);
 }
 
 
 void dl::Text::setString(std::string str)
 {
     m_textString = str;
-    C2D_TextFontParse(&m_textBuf, m_defaultFont, m_staticBuf, str.c_str());
+    C2D_TextFontParse(&m_textBuf, m_defaultFont, p_buf, str.c_str());
     C2D_TextOptimize(&m_textBuf);
 }
 
 const std::string &dl::Text::getString()
 {
     return m_textString;
-}
-
-float dl::Text::getWidth()
-{
-    return m_textBuf.width;
 }
 
 void dl::Text::setOrigin(const dl::Vector2f &origin)
@@ -51,9 +46,29 @@ void dl::Text::setOrigin(float x, float y)
     m_origin = dl::Vector2f(x,y);
 }
 
+
+void dl::Text::setScale(const dl::Vector2f &scale)
+{
+    m_scale = scale;
+}
+
+
+float dl::Text::getWidth()
+{
+    return m_textBuf.width;
+}
+
+
 const dl::Vector2f &dl::Text::getOrigin()
 {
     return m_origin;
 }
+
+const dl::Vector2f &dl::Text::getScale()
+{
+    return m_scale;
+}
+
+
 
 

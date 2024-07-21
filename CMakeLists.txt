@@ -27,6 +27,8 @@ add_library(dualie STATIC
         src/Dualie/Graphics/View.cpp
         src/Dualie/Graphics/Text.cpp
         include/Dualie/Graphics/Text.hpp
+        src/Dualie/Graphics/TextBuffer.cpp
+        include/Dualie/Graphics/TextBuffer.hpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
