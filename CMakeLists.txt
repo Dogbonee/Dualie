@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.28)
 project(dualie)
 
-
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(OPUSFILE REQUIRED IMPORTED_TARGET opusfile)
 
 add_library(dualie STATIC
         include/Dualie/Graphics.hpp
@@ -29,10 +30,16 @@ add_library(dualie STATIC
         include/Dualie/Graphics/Text.hpp
         src/Dualie/Graphics/TextBuffer.cpp
         include/Dualie/Graphics/TextBuffer.hpp
+        src/Dualie/Audio/Music.cpp
+        include/Dualie/Audio/Music.hpp
 )
 
+
+
 target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_include_directories(${PROJECT_NAME} PRIVATE pkg-config opusfile)
 target_link_libraries(${PROJECT_NAME} citro2d citro3d ctru m)
+target_link_libraries(${PROJECT_NAME} PkgConfig::OPUSFILE)
 
 target_compile_options(${PROJECT_NAME} PRIVATE
         -g -O2 -Wall
