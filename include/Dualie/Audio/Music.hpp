@@ -22,14 +22,15 @@ namespace dl
 
 
 
-        ndspWaveBuf s_waveBufs[3];
-        int16_t* s_audioBuffer = nullptr;
+        ndspWaveBuf m_waveBufs[3];
+        int16_t* m_audioBuffer = nullptr;
 
         OggOpusFile* m_opusFile;
 
-        LightEvent s_event;
+        LightEvent m_event;
         Thread m_threadId;
-        volatile bool s_quit = false;  // Quit flag
+        volatile bool m_quit = false;  // Quit flag
+        bool m_looping = false;
 
         // Retrieve strings for libopusfile errors
         // Sourced from David Gow's example code: https://davidgow.net/files/opusal.cpp
@@ -39,14 +40,17 @@ namespace dl
         void audioThread();
         static void threadWrapper(void* obj);
         bool fillBuffer(ndspWaveBuf* waveBuf_);
+        void allocateBuffers();
 
     public:
         Music();
         ~Music();
         void loadFromFile(std::string path);
 
-        void start();
+        void play();
+        void restart();
         void stop();
+        void setLooping(bool looping);
 
         static constexpr int SAMPLE_RATE = 48000;
         // Opus is fixed at 48kHz

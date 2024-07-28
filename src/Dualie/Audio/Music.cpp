@@ -8,35 +8,14 @@
 
 dl::Music::Music()
 {
-
-    //Maybe reset channel here
-
-    LightEvent_Init(&s_event, RESET_ONESHOT);
-
-    // Allocate audio buffer
-    const size_t bufferSize = WAVEBUF_SIZE * ARRAY_SIZE(s_waveBufs);
-    s_audioBuffer = (int16_t *)linearAlloc(bufferSize);
-    if(!s_audioBuffer) {
-        exit(-1);
-    }
-
-    // Setup waveBufs for NDSP
-    memset(&s_waveBufs, 0, sizeof(s_waveBufs));
-    int16_t *buffer = s_audioBuffer;
-
-    for(size_t i = 0; i < ARRAY_SIZE(s_waveBufs); ++i) {
-        s_waveBufs[i].data_vaddr = buffer;
-        s_waveBufs[i].status     = NDSP_WBUF_DONE;
-
-        buffer += WAVEBUF_SIZE / sizeof(buffer[0]);
-    }
-
+    LightEvent_Init(&m_event, RESET_ONESHOT);
+    allocateBuffers();
 }
 
 dl::Music::~Music()
 {
     ndspChnReset(0);
-    linearFree(s_audioBuffer);
+    linearFree(m_audioBuffer);
     op_free(m_opusFile);
 
 }
@@ -98,10 +77,10 @@ void dl::Music::loadFromFile(std::string path)
     }
 }
 
-void dl::Music::start()
+void dl::Music::play()
 {
     // Set the ndsp sound frame callback which signals our audioThread
-
+    m_quit = false;
     ndspSetCallback(&dl::Music::callbackWrapper, this);
 
     // Spawn audio thread
@@ -121,10 +100,23 @@ void dl::Music::start()
                                          THREAD_AFFINITY, false);
 }
 
+void dl::Music::restart()
+{
+    if(!m_quit)
+    {
+        stop();
+    }
+    op_raw_seek(m_opusFile, 0);
+    ndspChnWaveBufClear(0);
+    linearFree(m_audioBuffer);
+    allocateBuffers();
+    play();
+}
+
 void dl::Music::stop()
 {
-    s_quit = true;
-    LightEvent_Signal(&s_event);
+    m_quit = true;
+    LightEvent_Signal(&m_event);
 
     // Free the audio thread
     threadJoin(m_threadId, UINT64_MAX);
@@ -136,11 +128,11 @@ void dl::Music::audioCallback(void* const nul_)
 {
     (void)nul_;  // Unused
 
-    if(s_quit) { // Quit flag
+    if(m_quit) { // Quit flag
         return;
     }
 
-    LightEvent_Signal(&s_event);
+    LightEvent_Signal(&m_event);
 
 }
 
@@ -148,15 +140,22 @@ void dl::Music::audioThread()
 {
 
 
-    while(!s_quit) {  // Whilst the quit flag is unset,
+    while(!m_quit) {  // Whilst the quit flag is unset,
         // search our waveBufs and fill any that aren't currently
         // queued for playback (i.e, those that are 'done')
-        for(size_t i = 0; i < ARRAY_SIZE(s_waveBufs); ++i) {
-            if(s_waveBufs[i].status != NDSP_WBUF_DONE) {
+        for(size_t i = 0; i < ARRAY_SIZE(m_waveBufs); ++i) {
+            if(m_waveBufs[i].status != NDSP_WBUF_DONE) {
                 continue;
             }
 
-            if(!fillBuffer(&s_waveBufs[i])) {   // Playback complete
+            if(!fillBuffer(&m_waveBufs[i])) {   // Playback complete
+                if(m_looping){
+                    op_raw_seek(m_opusFile, 0);
+                    ndspChnWaveBufClear(0);
+                    linearFree(m_audioBuffer);
+                    allocateBuffers();
+                    continue;
+                }
                 return;
             }
         }
@@ -164,7 +163,7 @@ void dl::Music::audioThread()
         // Wait for a signal that we're needed again before continuing,
         // so that we can yield to other things that want to run
         // (Note that the 3DS uses cooperative threading)
-        LightEvent_Wait(&s_event);
+        LightEvent_Wait(&m_event);
     }
 }
 
@@ -217,5 +216,33 @@ void dl::Music::threadWrapper(void* obj)
     dl::Music* music = static_cast<dl::Music*>(obj);
     music->audioThread();
 }
+
+void dl::Music::allocateBuffers()
+{
+    // Allocate audio buffer
+    const size_t bufferSize = WAVEBUF_SIZE * ARRAY_SIZE(m_waveBufs);
+    m_audioBuffer = (int16_t *)linearAlloc(bufferSize);
+    if(!m_audioBuffer) {
+        exit(-1);
+    }
+
+    // Setup waveBufs for NDSP
+    memset(&m_waveBufs, 0, sizeof(m_waveBufs));
+    int16_t *buffer = m_audioBuffer;
+
+    for(size_t i = 0; i < ARRAY_SIZE(m_waveBufs); ++i) {
+        m_waveBufs[i].data_vaddr = buffer;
+        m_waveBufs[i].status     = NDSP_WBUF_DONE;
+
+        buffer += WAVEBUF_SIZE / sizeof(buffer[0]);
+    }
+}
+
+void dl::Music::setLooping(bool looping)
+{
+    m_looping = looping;
+}
+
+
 
 
