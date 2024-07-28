@@ -17,6 +17,13 @@ dl::RenderWindow::RenderWindow() {
     m_screens[TOP_SCREEN] = C2D_CreateScreenTarget(GFX_TOP, GFX_LEFT);
     m_screens[BOTTOM_SCREEN] = C2D_CreateScreenTarget(GFX_BOTTOM, GFX_LEFT);
 
+    ndspInit();
+    ndspChnReset(0);
+    ndspSetOutputMode(NDSP_OUTPUT_STEREO);
+    ndspChnSetInterp(0, NDSP_INTERP_POLYPHASE);
+    ndspChnSetRate(0, Music::SAMPLE_RATE);
+    ndspChnSetFormat(0, NDSP_FORMAT_STEREO_PCM16);
+
 }
 
 dl::RenderWindow::~RenderWindow() {
@@ -25,6 +32,7 @@ dl::RenderWindow::~RenderWindow() {
     romfsExit();
     cfguExit();
     gfxExit();
+    ndspExit();
 }
 
 
