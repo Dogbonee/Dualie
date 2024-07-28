@@ -9,6 +9,7 @@
 #include <Dualie/Graphics/Drawable.hpp>
 #include <Dualie/System/Input.hpp>
 #include <Dualie/Graphics/View.hpp>
+#include <Dualie/Audio/Music.hpp>
 
 namespace dl {
 

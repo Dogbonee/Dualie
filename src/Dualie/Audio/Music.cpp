@@ -9,13 +9,7 @@
 dl::Music::Music()
 {
 
-    // Setup NDSP
-    ndspInit();
-    ndspChnReset(0);
-    ndspSetOutputMode(NDSP_OUTPUT_STEREO);
-    ndspChnSetInterp(0, NDSP_INTERP_POLYPHASE);
-    ndspChnSetRate(0, SAMPLE_RATE);
-    ndspChnSetFormat(0, NDSP_FORMAT_STEREO_PCM16);
+    //Maybe reset channel here
 
     LightEvent_Init(&s_event, RESET_ONESHOT);
 
@@ -43,7 +37,6 @@ dl::Music::~Music()
 {
     ndspChnReset(0);
     linearFree(s_audioBuffer);
-    ndspExit();
     op_free(m_opusFile);
 
 }

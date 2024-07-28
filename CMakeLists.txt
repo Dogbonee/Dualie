@@ -32,6 +32,7 @@ add_library(dualie STATIC
         include/Dualie/Graphics/TextBuffer.hpp
         src/Dualie/Audio/Music.cpp
         include/Dualie/Audio/Music.hpp
+        include/Dualie/Audio.hpp
 )
 
 

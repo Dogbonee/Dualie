@@ -2,5 +2,6 @@
 #define DUALIE_DUALIE_HPP
 #include <Dualie/Graphics.hpp>
 #include <Dualie/System/Input.hpp>
+#include <Dualie/Audio.hpp>
 
 #endif //DUALIE_DUALIE_HPP

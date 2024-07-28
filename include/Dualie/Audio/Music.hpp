@@ -20,14 +20,7 @@ namespace dl
     class Music
     {
 
-        static constexpr int SAMPLE_RATE = 48000;            // Opus is fixed at 48kHz
-        static constexpr int SAMPLES_PER_BUF = SAMPLE_RATE * 120 / 1000;  // 120ms buffer
-        static constexpr int CHANNELS_PER_SAMPLE = 2;
 
-        static constexpr int THREAD_AFFINITY = -1;           // Execute thread on any core
-        static constexpr int THREAD_STACK_SZ = 32 * 1024;    // 32kB stack for audio thread
-
-        static constexpr size_t WAVEBUF_SIZE = SAMPLES_PER_BUF * CHANNELS_PER_SAMPLE * sizeof(int16_t);
 
         ndspWaveBuf s_waveBufs[3];
         int16_t* s_audioBuffer = nullptr;
@@ -55,6 +48,15 @@ namespace dl
         void start();
         void stop();
 
+        static constexpr int SAMPLE_RATE = 48000;
+        // Opus is fixed at 48kHz
+        static constexpr int SAMPLES_PER_BUF = SAMPLE_RATE * 120 / 1000;  // 120ms buffer
+        static constexpr int CHANNELS_PER_SAMPLE = 2;
+
+        static constexpr int THREAD_AFFINITY = -1;           // Execute thread on any core
+        static constexpr int THREAD_STACK_SZ = 32 * 1024;    // 32kB stack for audio thread
+
+        static constexpr size_t WAVEBUF_SIZE = SAMPLES_PER_BUF * CHANNELS_PER_SAMPLE * sizeof(int16_t);
     };
 
 }
