@@ -14,11 +14,8 @@
 #include <Dualie/Graphics/RectangleShape.hpp>
 #include <Dualie/Graphics/View.hpp>
 #include <Dualie/Graphics/Text.hpp>
-
-namespace dl {
-
-
-}
+#include <Dualie/Graphics/SpriteSheet.hpp>
+#include <Dualie/Graphics/Sprite.hpp>
 
 
 #endif //DUALIE_GRAPHICS_HPP

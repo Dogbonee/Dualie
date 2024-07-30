@@ -17,7 +17,7 @@ void dl::CircleShape::setRadius(float radius) {
     m_size = dl::Vector2f(radius*2, radius*2);
 }
 
-void dl::CircleShape::draw(const dl::Vector2f& viewOffset) const {
+void dl::CircleShape::draw(const dl::Vector2f& viewOffset) {
     if(m_outlineThickness > 0){
         C2D_DrawCircle(m_position.x + m_radius - m_origin.x - viewOffset.x, m_position.y + m_radius - m_origin.y - viewOffset.y, 0, m_radius, m_outlineColor.getColorValue(), m_outlineColor.getColorValue(), m_outlineColor.getColorValue(), m_outlineColor.getColorValue());
     }

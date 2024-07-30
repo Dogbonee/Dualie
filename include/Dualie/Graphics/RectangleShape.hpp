@@ -20,7 +20,7 @@ namespace dl {
 
         void setSize(const dl::Vector2f &size);
 
-        void draw(const dl::Vector2f& viewOffset) const override;
+        void draw(const dl::Vector2f& viewOffset) override;
 
     };
 

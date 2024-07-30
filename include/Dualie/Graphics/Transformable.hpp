@@ -17,9 +17,9 @@ namespace dl {
 
 
     public:
-        void setPosition(const dl::Vector2f& position);
+        virtual void setPosition(const dl::Vector2f& position);
         void setPosition(float x, float y);
-        void move(const dl::Vector2f& offset);
+        virtual void move(const dl::Vector2f& offset);
         void move(float xOffset, float yOffset);
 
         const dl::Vector2f& getPosition() const;

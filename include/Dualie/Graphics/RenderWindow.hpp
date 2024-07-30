@@ -29,7 +29,7 @@ namespace dl {
         void print(std::string str, int x, int y);
 
         void clear(SCREEN screen, Color color = dl::Color(255, 255, 255));
-        void draw(const dl::Drawable& drawable);
+        void draw(dl::Drawable& drawable);
         void display();
         bool isOpen();
 

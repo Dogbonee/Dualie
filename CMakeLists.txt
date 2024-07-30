@@ -33,6 +33,10 @@ add_library(dualie STATIC
         src/Dualie/Audio/Music.cpp
         include/Dualie/Audio/Music.hpp
         include/Dualie/Audio.hpp
+        src/Dualie/Graphics/Sprite.cpp
+        include/Dualie/Graphics/Sprite.hpp
+        src/Dualie/Graphics/SpriteSheet.cpp
+        include/Dualie/Graphics/SpriteSheet.hpp
 )
 
 
