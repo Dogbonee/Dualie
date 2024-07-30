@@ -1,0 +1,17 @@
+digraph "dl::Transformable"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="dl::Transformable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="dl::Shape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1Shape.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="dl::CircleShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1CircleShape.html",tooltip="A circle shape."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="dl::RectangleShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1RectangleShape.html",tooltip="A rectangle shape."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="dl::Sprite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1Sprite.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="dl::Text",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1Text.html",tooltip=" "];
+}

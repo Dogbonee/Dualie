@@ -1,0 +1,19 @@
+digraph "dl::RectangleShape"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="dl::RectangleShape",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="A rectangle shape."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="dl::Shape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1Shape.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="dl::Transformable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1Transformable.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_position" ,fontname="Helvetica"];
+  Node4 [label="dl::Vector2\< float \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1Vector2.html",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="dl::Drawable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1Drawable.html",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_fillColor\nm_outlineColor" ,fontname="Helvetica"];
+  Node6 [label="dl::Color",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1Color.html",tooltip="A class used to describe a RGBA color."];
+  Node6 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Black\nBlue\nCyan\nGreen\nMagenta\nRed\nTransparent\nWhite\nYellow" ,fontname="Helvetica"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_origin\nm_size" ,fontname="Helvetica"];
+}
