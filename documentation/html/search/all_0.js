@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['black_0',['Black',['../classdl_1_1Color.html#a35466df49654aa792a8aea185e44e2c8',1,'dl::Color']]],
-  ['blue_1',['Blue',['../classdl_1_1Color.html#ac42e3fbce2bbd868d0ef3ead6c8354cb',1,'dl::Color']]]
+  ['a_0',['A',['../namespacedl_1_1Input.html#a9d849945cc263a13889898718ae5b3a4a4b6078a81dfaed200d1c8b5eb6c847f2',1,'dl::Input']]]
 ];

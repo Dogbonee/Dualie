@@ -82,36 +82,36 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>dl{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classdl_1_1View.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdl_1_1View.html">View</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classdl_1_1Rect.html">dl::FloatRect</a> m_viewRect;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classdl_1_1View.html">View</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classdl_1_1View.html">View</a>(<span class="keyword">const</span> <a class="code" href="classdl_1_1Rect.html">dl::FloatRect</a>&amp; viewRect);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdl_1_1View.html#a5b2b0a6d81ee5c296fc8123cbd712ac8">reset</a>(<span class="keyword">const</span> <a class="code" href="classdl_1_1Rect.html">dl::FloatRect</a>&amp; viewRect);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdl_1_1View.html#afbc7dfd725d60a20a5baccb73e238dc0">setCenter</a>(<a class="code" href="classdl_1_1Vector2.html">dl::Vector2f</a> center);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdl_1_1View.html#a4536f2e383fb09345abc038ff1d22543">move</a>(<a class="code" href="classdl_1_1Vector2.html">dl::Vector2f</a> offset);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classdl_1_1Vector2.html">dl::Vector2f</a> <a class="code" href="classdl_1_1View.html#a02fb385a46011f8baaf5968626c3bead">getOffset</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classdl_1_1View.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classdl_1_1View.html">View</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classdl_1_1Rect.html">dl::FloatRect</a> m_viewRect;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classdl_1_1View.html">View</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classdl_1_1View.html">View</a>(<span class="keyword">const</span> <a class="code" href="classdl_1_1Rect.html">dl::FloatRect</a>&amp; viewRect);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classdl_1_1View.html#a5b2b0a6d81ee5c296fc8123cbd712ac8">reset</a>(<span class="keyword">const</span> <a class="code" href="classdl_1_1Rect.html">dl::FloatRect</a>&amp; viewRect);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classdl_1_1View.html#afbc7dfd725d60a20a5baccb73e238dc0">setCenter</a>(<a class="code" href="classdl_1_1Vector2.html">dl::Vector2f</a> center);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classdl_1_1View.html#a4536f2e383fb09345abc038ff1d22543">move</a>(<a class="code" href="classdl_1_1Vector2.html">dl::Vector2f</a> offset);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classdl_1_1Vector2.html">dl::Vector2f</a> <a class="code" href="classdl_1_1View.html#a02fb385a46011f8baaf5968626c3bead">getOffset</a>();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//DUALIE_VIEW_H</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//DUALIE_VIEW_H</span></div>
 <div class="ttc" id="aclassdl_1_1Rect_html"><div class="ttname"><a href="classdl_1_1Rect.html">dl::Rect&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclassdl_1_1Vector2_html"><div class="ttname"><a href="classdl_1_1Vector2.html">dl::Vector2&lt; float &gt;</a></div></div>
-<div class="ttc" id="aclassdl_1_1View_html"><div class="ttname"><a href="classdl_1_1View.html">dl::View</a></div><div class="ttdef"><b>Definition:</b> View.hpp:14</div></div>
+<div class="ttc" id="aclassdl_1_1View_html"><div class="ttname"><a href="classdl_1_1View.html">dl::View</a></div><div class="ttdoc">Used as a camera-like object to move the screen view to different positions in world coordinates.</div><div class="ttdef"><b>Definition:</b> View.hpp:19</div></div>
 <div class="ttc" id="aclassdl_1_1View_html_a02fb385a46011f8baaf5968626c3bead"><div class="ttname"><a href="classdl_1_1View.html#a02fb385a46011f8baaf5968626c3bead">dl::View::getOffset</a></div><div class="ttdeci">dl::Vector2f getOffset()</div><div class="ttdef"><b>Definition:</b> View.cpp:27</div></div>
 <div class="ttc" id="aclassdl_1_1View_html_a4536f2e383fb09345abc038ff1d22543"><div class="ttname"><a href="classdl_1_1View.html#a4536f2e383fb09345abc038ff1d22543">dl::View::move</a></div><div class="ttdeci">void move(dl::Vector2f offset)</div><div class="ttdoc">Moves the view offset number of pixels.</div><div class="ttdef"><b>Definition:</b> View.cpp:22</div></div>
 <div class="ttc" id="aclassdl_1_1View_html_a5b2b0a6d81ee5c296fc8123cbd712ac8"><div class="ttname"><a href="classdl_1_1View.html#a5b2b0a6d81ee5c296fc8123cbd712ac8">dl::View::reset</a></div><div class="ttdeci">void reset(const dl::FloatRect &amp;viewRect)</div><div class="ttdoc">Sets the view's viewrect to a new viewrect.</div><div class="ttdef"><b>Definition:</b> View.cpp:13</div></div>

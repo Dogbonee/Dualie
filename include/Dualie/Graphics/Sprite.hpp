@@ -13,6 +13,9 @@
 namespace dl
 {
 
+    /**
+     * @brief A class used to handle the drawing and transformation of sprites
+     */
     class Sprite : public dl::Transformable, public dl::Drawable
     {
 

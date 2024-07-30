@@ -12,6 +12,10 @@
 #include <Dualie/System/Rect.hpp>
 
 namespace dl {
+
+    /**
+     * @brief The base class for any shape
+     */
     class Shape : public dl::Transformable, public dl::Drawable {
 
     protected:

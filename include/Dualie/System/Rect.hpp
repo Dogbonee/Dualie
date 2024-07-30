@@ -9,6 +9,10 @@
 
 namespace dl {
 
+    /**
+     * @brief A class that represents a bounding box
+     * @tparam T    The type of number that its members use
+     */
     template<class T>
     class Rect {
         using FloatRect = Rect<float>;

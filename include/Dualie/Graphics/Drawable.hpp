@@ -9,6 +9,9 @@
 
 namespace dl {
 
+    /**
+     * @brief The base class for any object that can be drawn to the screen
+     */
     class Drawable {
 
     public:
