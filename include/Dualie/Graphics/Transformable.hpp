@@ -10,6 +10,9 @@
 
 namespace dl {
 
+    /**
+     * @brief A base class for anything that has a position on the screen
+     */
     class Transformable {
 
     protected:

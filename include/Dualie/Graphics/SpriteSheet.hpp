@@ -10,6 +10,9 @@
 
 namespace dl
 {
+    /**
+     * @brief A class used to load and contain t3x formatted spritesheets
+     */
     class SpriteSheet
     {
         C2D_SpriteSheet m_spriteSheet;

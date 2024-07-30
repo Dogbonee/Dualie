@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['rect_38',['Rect',['../classdl_1_1Rect.html',1,'dl']]],
-  ['rect_3c_20float_20_3e_39',['Rect&lt; float &gt;',['../classdl_1_1Rect.html',1,'dl']]],
-  ['rectangleshape_40',['RectangleShape',['../classdl_1_1RectangleShape.html',1,'dl']]],
-  ['red_41',['Red',['../classdl_1_1Color.html#a53ecfcb87e78070eb8c8b051e71a0abe',1,'dl::Color']]],
-  ['renderwindow_42',['RenderWindow',['../classdl_1_1RenderWindow.html',1,'dl']]],
-  ['reset_43',['reset',['../classdl_1_1View.html#a5b2b0a6d81ee5c296fc8123cbd712ac8',1,'dl::View']]],
-  ['restart_44',['restart',['../classdl_1_1Music.html#a9bdede70d654c8565d861002370aa3cb',1,'dl::Music']]],
-  ['rotate_45',['rotate',['../classdl_1_1Sprite.html#a50d33acd3fd6b50416c802c1fba49fd3',1,'dl::Sprite']]]
+  ['magenta_56',['Magenta',['../classdl_1_1Color.html#a36ceb54e7fce16d3423ac03c86e996bb',1,'dl::Color']]],
+  ['move_57',['move',['../classdl_1_1Sprite.html#aadf39ca86a838792a5cc24a8575ac66c',1,'dl::Sprite::move()'],['../classdl_1_1Transformable.html#afb785af5ebba487e3919b17644a5eab2',1,'dl::Transformable::move(const dl::Vector2f &amp;offset)'],['../classdl_1_1Transformable.html#a5b2b472d6e135e760f4630df8236873c',1,'dl::Transformable::move(float xOffset, float yOffset)'],['../classdl_1_1View.html#a4536f2e383fb09345abc038ff1d22543',1,'dl::View::move()']]],
+  ['music_58',['Music',['../classdl_1_1Music.html',1,'dl']]]
 ];

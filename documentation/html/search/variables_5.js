@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transparent_146',['Transparent',['../classdl_1_1Color.html#a784a36aa8d63c2e7c7273c802d6e27ac',1,'dl::Color']]]
+  ['red_184',['Red',['../classdl_1_1Color.html#a53ecfcb87e78070eb8c8b051e71a0abe',1,'dl::Color']]]
 ];

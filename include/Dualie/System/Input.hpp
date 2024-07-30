@@ -10,7 +10,9 @@
 #include <array>
 #include <Dualie/System/Vector2.hpp>
 
-
+/**
+ * @brief A namespace that encapsulates all input-related functions and enumerations
+ */
 namespace dl::Input {
 
     enum InputType{

@@ -18,6 +18,9 @@
 namespace dl
 {
 
+    /**
+     * @brief A class that handles the playback of opus audio files
+     */
     class Music
     {
 

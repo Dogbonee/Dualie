@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['magenta_144',['Magenta',['../classdl_1_1Color.html#a36ceb54e7fce16d3423ac03c86e996bb',1,'dl::Color']]]
+  ['lasttouchposition_182',['LastTouchPosition',['../namespacedl_1_1Input.html#a5309db81024498d3e18bf3506aeb9865',1,'dl::Input']]]
 ];

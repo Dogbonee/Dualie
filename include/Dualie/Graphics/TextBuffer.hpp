@@ -8,6 +8,11 @@
 
 namespace dl
 {
+
+    /**
+     * @brief Used to contain text objects. This class is required for the Text object to operate.
+     * @note Multiple texts can be assigned to a single text buffer so long as they do not overflow the buffer
+     */
     class TextBuffer
     {
 
