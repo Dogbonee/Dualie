@@ -8,15 +8,26 @@ Dualie is very early in development and currently only supports bare bones graph
 in any area. 
 
 ### Documentation
-Dualie lacks documentation, but aims to be fairly intutive and similar to SFML. As always, contributions in this department
-are more than welcome.
+You can find the documentation for dualie [here](http://dogbonee.github.io/Dualie). Not many examples of the library currently exist,
+however you can see a port of tetris that I made using the library [here](https://github.com/Dogbonee/3DS_Tetritime).
 
 ### How to build
 DevkitPro is required to build this library. To build, set -DCMAKE_TOOLCHAIN_FILE to wherever 3DS.cmake lies in your filesystem,
 then build the project normally using CMake.
 
 ### How to use
-Use `target_link_libraries` to link <path/to/libdualie.a>, citro2d, citro3d, ctru, m  
+Use these lines to link audio:
+```
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(OPUSFILE REQUIRED IMPORTED_TARGET opusfile)
+
+target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_include_directories(${PROJECT_NAME} PRIVATE pkg-config opusfile)
+target_link_libraries(${PROJECT_NAME} PkgConfig::OPUSFILE)
+```
+
+Use `target_link_libraries` to link `<path/to/libdualie.a>, citro2d, citro3d, ctru, m`
+
 Use `target_include_directories` to the libraries include directory, then build with devkitPro
 similar to the library build process. 
 
