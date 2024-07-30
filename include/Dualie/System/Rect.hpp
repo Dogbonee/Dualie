@@ -46,11 +46,21 @@ namespace dl {
             *this = rect;
         }
 
-
+        /**
+         * @brief Returns whether a rect intersects the bounds of this rect
+         * @param rect  The rect to check
+         * @return Whether the rect intersects this rect's bounds
+         */
         bool intersects(Rect<T> rect){
             return (this->left < rect.left + rect.width && this->left + this->width > rect.left &&
             this->top < rect.top + rect.height && this->top + this->height > rect.top);
         }
+
+        /**
+         * @brief Returns whether a point intersects the bounds of this rect
+         * @param point The point to check
+         * @return Whether the point intersects this rect's bounds
+         */
         bool contains(dl::Vector2<T> point){
             return (point.x > this->left && point.x < this->left + this->width && point.y > this->top && point.y < this->top + this->height);
         }

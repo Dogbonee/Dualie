@@ -12,6 +12,10 @@ namespace dl {
     class Drawable {
 
     public:
+        /**
+         * @brief Draws the drawable to the screen
+         * @param viewOffset    The offset of the current view to be used for internal drawable positioning
+         */
         virtual void draw(const dl::Vector2f& viewOffset) = 0;
 
 

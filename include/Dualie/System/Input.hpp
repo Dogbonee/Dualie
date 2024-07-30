@@ -55,11 +55,36 @@ namespace dl::Input {
      extern u32 KeyHeldMask;
      extern u32 KeyReleasedMask;
 
+
+     /**
+      * @brief The touch position of the screen. If the screen is not touched, This will be (0,0). See LastTouchPosition
+      */
      extern dl::Vector2f TouchPosition;
+
+    /**
+     * @brief The touch position of the screen. If the screen is not touched, This will be the last valid touch of the screen. See TouchPosition
+     */
      extern dl::Vector2f LastTouchPosition;
 
+     /**
+      * @brief Returns whether a certain key was pressed that frame. Note that this does not capture held buttons
+      * @param key  The button to check
+      * @return     Whether the button is pressed
+      */
      bool isKeyPressed(Key key);
+
+     /**
+      * @brief Returns whether a certain key was held that frame.
+      * @param key  The button to check
+      * @return Whether the button is held
+      */
      bool isKeyHeld(Key key);
+
+     /**
+      * @brief Returns whether a certain key was released that frame.
+      * @param key  The button to check
+      * @return Whether the button is released
+      */
      bool isKeyReleased(Key key);
 
 

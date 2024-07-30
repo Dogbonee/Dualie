@@ -15,6 +15,10 @@ namespace dl
         C2D_SpriteSheet m_spriteSheet;
 
     public:
+        /**
+         * @brief Loads a spritesheet from a t3x file
+         * @param path  Path to load from
+         */
         void loadFromFile(const std::string &path);
         C2D_SpriteSheet getSpriteSheet();
 

@@ -44,18 +44,67 @@ class Text : public dl::Transformable, public dl::Drawable
         explicit Text(const dl::TextBuffer& textBuffer);
         ~Text();
 
+        /**
+         * @brief reparses and reoptimizes the text. This should be used if you call TextBuffer::flushBuffer beforehand.
+         */
         void updateDynamicText();
 
+        /**
+         * @brief Sets the text's string
+         * @param str   The string to set
+         */
         void setString(std::string str);
+
+        /**
+         * @brief Sets the scale of the text
+         * @param scale     The scale to set
+         */
         void setScale(const dl::Vector2f& scale);
+
+        /**
+        * @brief Sets the alignment of the text
+        * @param scale     The alignment to set
+        */
         void setAlignment(TextAlignment alignment);
 
+        /**
+        * @brief Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds.
+        * Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size
+        * will cause the shape to be centered on its position.
+        * @param origin    The origin in pixels
+        */
         void setOrigin(const dl::Vector2f& origin);
+
+        /**
+        * @brief Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds.
+        * Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size
+        * will cause the shape to be centered on its position.
+        * @param x    The origin in pixels (X)
+        * @param y    The origin in pixels (Y)
+        */
         void setOrigin(float x, float y);
 
+        /**
+         *
+         * @return The text's string
+         */
         const std::string &getString();
+
+        /**
+         *
+         * @return The width of the text in pixels
+         */
         float getWidth();
+
+        /**
+         * @return the origin in pixels
+         */
         const dl::Vector2f& getOrigin();
+
+        /**
+         *
+         * @return the scale in pixels
+         */
         const dl::Vector2f& getScale();
 
         void draw(const dl::Vector2f &viewOffset) override;

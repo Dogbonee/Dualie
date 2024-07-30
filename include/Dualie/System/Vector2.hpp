@@ -46,6 +46,10 @@ public:
         return (this->x != vector.x) || (this->y != vector.y);
     }
 
+    /**
+     * @brief Converts the vector to a floored string for printing purposes
+     * @return The vector in string format
+     */
     std::string toString() const {
         return "(" + std::to_string((int)x) + ", " + std::to_string((int)y) + ")";
     }

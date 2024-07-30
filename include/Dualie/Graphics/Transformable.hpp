@@ -17,11 +17,35 @@ namespace dl {
 
 
     public:
+        /**
+         * @brief Sets the position of the transformable
+         * @param position  The position to set
+         */
         virtual void setPosition(const dl::Vector2f& position);
+
+        /**
+         * @brief Sets the position of the transformable
+         * @param x  The position to set (X)
+         * @param y  The position to set (Y)
+         */
         void setPosition(float x, float y);
+
+        /**
+         * @brief Moves the transformable offset number of pixels.
+         * @param offset    The offset to move
+         */
         virtual void move(const dl::Vector2f& offset);
+
+        /**
+         * @brief Moves the transformable offset number of pixels.
+         * @param xOffset   The offset to move (X)
+         * @param yOffset   The offset to move (Y)
+         */
         void move(float xOffset, float yOffset);
 
+        /**
+         * @return The transformable's position
+         */
         const dl::Vector2f& getPosition() const;
 
     };
