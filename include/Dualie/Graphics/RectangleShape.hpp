@@ -10,6 +10,9 @@
 
 namespace dl {
 
+    /**
+     * @brief A rectangle shape
+     */
     class RectangleShape : public dl::Shape {
 
 
@@ -18,6 +21,10 @@ namespace dl {
 
         RectangleShape(const dl::Vector2f &size);
 
+        /**
+         * @brief Sets the size of the rectangle
+         * @param size  The size in pixels
+         */
         void setSize(const dl::Vector2f &size);
 
         void draw(const dl::Vector2f& viewOffset) override;

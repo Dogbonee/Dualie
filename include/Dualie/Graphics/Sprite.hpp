@@ -13,6 +13,9 @@
 namespace dl
 {
 
+    /**
+     * @brief A class used to handle the drawing and transformation of sprites
+     */
     class Sprite : public dl::Transformable, public dl::Drawable
     {
 
@@ -24,14 +27,43 @@ namespace dl
 
         Sprite();
 
+        /**
+         * @brief Loads an image into the sprite from a spritesheet
+         * @param spriteSheet   The spritesheet to target
+         * @param index     The image index of the spritesheet
+         */
         void loadFromSpriteSheet(SpriteSheet spriteSheet, size_t index);
 
-        void draw(const dl::Vector2f &viewOffset) override;
+        /**
+         * @brief Sets the position of the sprite
+         * @param position  The position to set
+         */
         void setPosition(const dl::Vector2f &position) override;
+
+        /**
+         * @brief Moves the sprite offset number of pixels.
+         * @param offset    The offset to move
+         */
         void move(const dl::Vector2f &offset) override;
+
+        /**
+         * @brief Sets the rotation of the sprite in radians
+         * @param rotation  The rotation to set (in radians)
+         */
         void setRotation(const float &rotation);
+
+        /**
+         * @return The sprite's rotation in radians
+         */
         const float &getRotation();
+
+        /**
+         * @brief Rotates the sprite on top of its current rotation
+         * @param rotationOffset    The rotation in radians to rotate
+         */
         void rotate(const float &rotationOffset);
+
+        void draw(const dl::Vector2f &viewOffset) override;
 
         friend C2D_SpriteSheet SpriteSheet::getSpriteSheet();
 

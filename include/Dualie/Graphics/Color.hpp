@@ -13,6 +13,9 @@ namespace dl {
 
     typedef u32 uint32_t;
 
+    /**
+     * @brief A class used to describe a RGBA color
+     */
     class Color {
 
         u32 m_color;
@@ -21,6 +24,12 @@ namespace dl {
         Color();
         Color(std::uint8_t red, std::uint8_t green, std::uint8_t blue, std::uint8_t alpha = 255);
         explicit Color(std::uint32_t color);
+
+        /**
+         * @brief Color values are stored as a 32 bit integer in the format ABGR, with A being shifted 24 bits, B 16 bits,
+         * and so on.
+         * @return  The color value as a 32 bit integer
+         */
         const u32 & getColorValue() const;
 
 

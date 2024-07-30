@@ -26,42 +26,94 @@ namespace dl
         WordWrap         = BIT(4), ///< Draws text with wrapping of full words before specified width. Requires a float value, passed after color if C2D_WithColor is specified.
     };
 
-class Text : public dl::Transformable, public dl::Drawable
-    {
-        C2D_TextBuf p_buf;
-        C2D_Text m_textBuf;
-        C2D_Font m_defaultFont;
-        C2D_Font m_customFont;
-        TextAlignment m_alignment;
+    /**
+     * @brief A class used to handle the transformation and drawing of visible text
+     */
+    class Text : public dl::Transformable, public dl::Drawable
+        {
+            C2D_TextBuf p_buf;
+            C2D_Text m_textBuf;
+            C2D_Font m_defaultFont;
+            C2D_Font m_customFont;
+            TextAlignment m_alignment;
 
-        std::string m_textString;
+            std::string m_textString;
 
-        dl::Vector2f m_origin;
+            dl::Vector2f m_origin;
 
-        dl::Vector2f m_scale;
+            dl::Vector2f m_scale;
 
-    public:
-        explicit Text(const dl::TextBuffer& textBuffer);
-        ~Text();
+        public:
+            explicit Text(const dl::TextBuffer& textBuffer);
+            ~Text();
 
-        void updateDynamicText();
+            /**
+             * @brief reparses and reoptimizes the text. This should be used if you call TextBuffer::flushBuffer beforehand.
+             */
+            void updateDynamicText();
 
-        void setString(std::string str);
-        void setScale(const dl::Vector2f& scale);
-        void setAlignment(TextAlignment alignment);
+            /**
+             * @brief Sets the text's string
+             * @param str   The string to set
+             */
+            void setString(std::string str);
 
-        void setOrigin(const dl::Vector2f& origin);
-        void setOrigin(float x, float y);
+            /**
+             * @brief Sets the scale of the text
+             * @param scale     The scale to set
+             */
+            void setScale(const dl::Vector2f& scale);
 
-        const std::string &getString();
-        float getWidth();
-        const dl::Vector2f& getOrigin();
-        const dl::Vector2f& getScale();
+            /**
+            * @brief Sets the alignment of the text
+            * @param scale     The alignment to set
+            */
+            void setAlignment(TextAlignment alignment);
 
-        void draw(const dl::Vector2f &viewOffset) override;
+            /**
+            * @brief Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds.
+            * Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size
+            * will cause the shape to be centered on its position.
+            * @param origin    The origin in pixels
+            */
+            void setOrigin(const dl::Vector2f& origin);
+
+            /**
+            * @brief Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds.
+            * Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size
+            * will cause the shape to be centered on its position.
+            * @param x    The origin in pixels (X)
+            * @param y    The origin in pixels (Y)
+            */
+            void setOrigin(float x, float y);
+
+            /**
+             *
+             * @return The text's string
+             */
+            const std::string &getString();
+
+            /**
+             *
+             * @return The width of the text in pixels
+             */
+            float getWidth();
+
+            /**
+             * @return the origin in pixels
+             */
+            const dl::Vector2f& getOrigin();
+
+            /**
+             *
+             * @return the scale in pixels
+             */
+            const dl::Vector2f& getScale();
+
+            void draw(const dl::Vector2f &viewOffset) override;
 
 
-    };
+        };
 
 }
 

@@ -18,6 +18,9 @@
 namespace dl
 {
 
+    /**
+     * @brief A class that handles the playback of opus audio files
+     */
     class Music
     {
 
@@ -45,11 +48,32 @@ namespace dl
     public:
         Music();
         ~Music();
+
+        /**
+         * @brief loads a opus file from romfs
+         * @param path  The path of the file to open
+         */
         void loadFromFile(std::string path);
 
+        /**
+         * @brief Plays the opus music file loaded
+         */
         void play();
+
+        /**
+         * @brief Restarts the song from the beginning. If playback is stopped, it plays it
+         */
         void restart();
+
+        /**
+         * @brief Stops the currently playing song. Maintains the current position of the music.
+         */
         void stop();
+
+        /**
+         * @brief Sets whether the music should loop when finished
+         * @param looping   Music should loop or not
+         */
         void setLooping(bool looping);
 
         static constexpr int SAMPLE_RATE = 48000; // Opus is fixed at 48kHz
