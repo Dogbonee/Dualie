@@ -18,7 +18,7 @@ dl::Text::~Text()
     C2D_FontFree(m_defaultFont);
 }
 
-void dl::Text::draw(const dl::Vector2f &viewOffset) const
+void dl::Text::draw(const dl::Vector2f &viewOffset)
 {
     C2D_DrawText(&m_textBuf, m_alignment, m_position.x - m_origin.x, m_position.y - m_origin.y, 0, m_scale.x, m_scale.y);
 }

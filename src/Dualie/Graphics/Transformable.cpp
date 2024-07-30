@@ -10,8 +10,7 @@ void dl::Transformable::setPosition(const dl::Vector2f& position) {
 }
 
 void dl::Transformable::setPosition(float x, float y) {
-    m_position.x = x;
-    m_position.y = y;
+    setPosition(dl::Vector2f(x,y));
 }
 
 const dl::Vector2f &dl::Transformable::getPosition() const{
@@ -24,6 +23,5 @@ void dl::Transformable::move(const dl::Vector2f &offset) {
 }
 
 void dl::Transformable::move(float xOffset, float yOffset) {
-    m_position.x += xOffset;
-    m_position.y += yOffset;
+    move(dl::Vector2f(xOffset,yOffset));
 }

@@ -17,7 +17,7 @@ public:
 
     void setRadius(float radius);
 
-    void draw(const dl::Vector2f& viewOffset) const override;
+    void draw(const dl::Vector2f& viewOffset) override;
 
 protected:
     float m_radius;

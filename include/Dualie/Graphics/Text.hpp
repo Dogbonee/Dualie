@@ -58,7 +58,7 @@ class Text : public dl::Transformable, public dl::Drawable
         const dl::Vector2f& getOrigin();
         const dl::Vector2f& getScale();
 
-        void draw(const dl::Vector2f &viewOffset) const override;
+        void draw(const dl::Vector2f &viewOffset) override;
 
 
     };

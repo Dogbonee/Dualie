@@ -12,7 +12,7 @@ namespace dl {
     class Drawable {
 
     public:
-        virtual void draw(const dl::Vector2f& viewOffset) const = 0;
+        virtual void draw(const dl::Vector2f& viewOffset) = 0;
 
 
     };

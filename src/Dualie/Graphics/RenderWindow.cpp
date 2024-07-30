@@ -60,7 +60,7 @@ void dl::RenderWindow::clear(SCREEN screen, Color color) {
     C2D_SceneBegin(m_screens[screen]);
 }
 
-void dl::RenderWindow::draw(const dl::Drawable &drawable) {
+void dl::RenderWindow::draw(dl::Drawable &drawable) {
     drawable.draw(m_view.getOffset());
 }
 

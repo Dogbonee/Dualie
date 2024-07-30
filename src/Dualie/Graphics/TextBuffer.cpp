@@ -2,7 +2,7 @@
 // Created by caleb on 7/20/24.
 //
 
-#include "Dualie/Graphics/TextBuffer.hpp"
+#include <Dualie/Graphics/TextBuffer.hpp>
 
 dl::TextBuffer::TextBuffer(size_t bufSize)
 {
