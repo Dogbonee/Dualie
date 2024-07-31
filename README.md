@@ -13,28 +13,40 @@ however you can see a port of tetris that I made using the library [here](https:
 
 ### How to build
 DevkitPro is required to build this library. To build, set -DCMAKE_TOOLCHAIN_FILE to wherever 3DS.cmake lies in your filesystem,
-then build the project normally using CMake.
+then build the project normally using CMake. You can install the library by using `make install` or `ninja install`. Note that
+the `DEVKITPRO` environment variable needs to be correctly set.
 
 ### How to use
-Use these lines to link audio:
+Similar to building, `CMAKE_TOOLCHAIN_FILE` must be set to the 3ds.cmake file. `Dualie_DIR` then needs to be set to the cmake directory 
+located in the dualie root directory. Then one can link to the library by simply using  
+`target_link_libraries(${PROJECT_NAME} ${DUALIE_LIBRARY})`  
+Below is a sample CMakeLists.txt that fully links the library and its dependencies:
+
 ```
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(OPUSFILE REQUIRED IMPORTED_TARGET opusfile)
-
-target_include_directories(${PROJECT_NAME} PRIVATE include)
-target_include_directories(${PROJECT_NAME} PRIVATE pkg-config opusfile)
-target_link_libraries(${PROJECT_NAME} PkgConfig::OPUSFILE)
+cmake_minimum_required(VERSION 3.28)
+project(Dualie_Demo)
+set(CMAKE_CXX_STANDARD 17)
+set(Dualie_DIR "<DualieRoot>/cmake")
+find_package(Dualie REQUIRED)
+add_executable(Dualie_Demo main.cpp)
+target_link_libraries(${PROJECT_NAME} ${DUALIE_LIBRARY})
+target_compile_options(${PROJECT_NAME} PRIVATE
+        -g -O2 -Wall
+)
+ctr_generate_smdh(${PROJECT_NAME}.smdh
+        NAME "${PROJECT_NAME}"
+        DESCRIPTION "v1.0.0"
+        AUTHOR "SOMEBODY"
+)
+ctr_create_3dsx(${PROJECT_NAME}
+        SMDH ${PROJECT_NAME}.smdh
+)
 ```
-
-Use `target_link_libraries` to link `<path/to/libdualie.a>, citro2d, citro3d, ctru, m`
-
-Use `target_include_directories` to the libraries include directory, then build with devkitPro
-similar to the library build process. 
 
 ## Example
 
 Similarly to SFML, graphics revolve around a RenderWindow object, and draw targets can be selected in the clear function.
-Below is a simple program that draws a rectangle to the top screen and a circle to the bottom screen.
+Below is a simple program that draws a rectangle to the top screen and a circle to the bottom screen. 
 
 ```
 #include <Dualie/Dualie.hpp>
