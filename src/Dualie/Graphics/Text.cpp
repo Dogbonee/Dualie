@@ -20,7 +20,7 @@ dl::Text::~Text()
 
 void dl::Text::draw(const dl::Vector2f &viewOffset)
 {
-    C2D_DrawText(&m_textBuf, m_alignment, m_position.x - m_origin.x, m_position.y - m_origin.y, 0, m_scale.x, m_scale.y);
+    C2D_DrawText(&m_textBuf, m_alignment | C2D_WithColor, m_position.x - m_origin.x - viewOffset.x, m_position.y - m_origin.y - viewOffset.y, 0, m_scale.x, m_scale.y, m_color.getColorValue());
 }
 
 
@@ -53,12 +53,6 @@ void dl::Text::setScale(const dl::Vector2f &scale)
 }
 
 
-float dl::Text::getWidth()
-{
-    return m_textBuf.width;
-}
-
-
 const dl::Vector2f &dl::Text::getOrigin()
 {
     return m_origin;
@@ -77,6 +71,11 @@ void dl::Text::updateDynamicText()
 void dl::Text::setAlignment(dl::TextAlignment alignment)
 {
     m_alignment = alignment;
+}
+
+void dl::Text::setColor(const dl::Color &color)
+{
+    m_color = color;
 }
 
 
