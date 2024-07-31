@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classdl_1_1Drawable-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">dl::Drawable Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -85,9 +86,18 @@ Inheritance diagram for dl::Drawable:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa253dbe1c0ccacda939389b7c3e50524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Drawable.html#aa253dbe1c0ccacda939389b7c3e50524">viewShouldAffect</a> (bool effective)</td></tr>
+<tr class="memdesc:aa253dbe1c0ccacda939389b7c3e50524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the current view should affect the position of the drawable. Otherwise, its position on the screen will be absolute.  <a href="classdl_1_1Drawable.html#aa253dbe1c0ccacda939389b7c3e50524">More...</a><br /></td></tr>
+<tr class="separator:aa253dbe1c0ccacda939389b7c3e50524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cab96e84d4ca9fe80af4e1eb8770f92"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Drawable.html#a4cab96e84d4ca9fe80af4e1eb8770f92">draw</a> (const <a class="el" href="classdl_1_1Vector2.html">dl::Vector2f</a> &amp;viewOffset)=0</td></tr>
 <tr class="memdesc:a4cab96e84d4ca9fe80af4e1eb8770f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the drawable to the screen.  <a href="classdl_1_1Drawable.html#a4cab96e84d4ca9fe80af4e1eb8770f92">More...</a><br /></td></tr>
 <tr class="separator:a4cab96e84d4ca9fe80af4e1eb8770f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a52b3d305b8fbd2ac7f48cab591f1edbd"><td class="memItemLeft" align="right" valign="top"><a id="a52b3d305b8fbd2ac7f48cab591f1edbd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bViewDoesAffect</b> = true</td></tr>
+<tr class="separator:a52b3d305b8fbd2ac7f48cab591f1edbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The base class for any object that can be drawn to the screen. </p>
@@ -125,6 +135,40 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classdl_1_1Text.html#a5c09fd45997d262a294dfe1ab4b65ea3">dl::Text</a>, <a class="el" href="classdl_1_1Sprite.html#ac60c431d7fb038427a01dce19096a9bd">dl::Sprite</a>, <a class="el" href="classdl_1_1RectangleShape.html#a145829e94d07f314bd166eb5b0a926cb">dl::RectangleShape</a>, and <a class="el" href="classdl_1_1CircleShape.html#adaee47ef992429d7f9337270d3050efe">dl::CircleShape</a>.</p>
+
+</div>
+</div>
+<a id="aa253dbe1c0ccacda939389b7c3e50524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa253dbe1c0ccacda939389b7c3e50524">&#9670;&nbsp;</a></span>viewShouldAffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dl::Drawable::viewShouldAffect </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>effective</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set whether the current view should affect the position of the drawable. Otherwise, its position on the screen will be absolute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effective</td><td>Whether the view will be effective on this drawable </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

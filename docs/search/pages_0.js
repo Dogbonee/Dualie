@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dualie_217',['Dualie',['../md_README.html',1,'']]]
+  ['dualie_219',['Dualie',['../md_README.html',1,'']]]
 ];
