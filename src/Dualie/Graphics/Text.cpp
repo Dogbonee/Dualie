@@ -20,7 +20,8 @@ dl::Text::~Text()
 
 void dl::Text::draw(const dl::Vector2f &viewOffset)
 {
-    C2D_DrawText(&m_textBuf, m_alignment | C2D_WithColor, m_position.x - m_origin.x - viewOffset.x, m_position.y - m_origin.y - viewOffset.y, 0, m_scale.x, m_scale.y, m_color.getColorValue());
+    auto vo = m_bViewDoesAffect ? viewOffset : dl::Vector2f(0,0);
+    C2D_DrawText(&m_textBuf, m_alignment | C2D_WithColor, m_position.x - m_origin.x - vo.x, m_position.y - m_origin.y - vo.y, 0, m_scale.x, m_scale.y, m_color.getColorValue());
 }
 
 
