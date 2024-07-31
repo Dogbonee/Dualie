@@ -18,8 +18,9 @@ void dl::CircleShape::setRadius(float radius) {
 }
 
 void dl::CircleShape::draw(const dl::Vector2f& viewOffset) {
+    auto vo = m_bViewDoesAffect ? viewOffset : dl::Vector2f(0,0);
     if(m_outlineThickness > 0){
-        C2D_DrawCircle(m_position.x + m_radius - m_origin.x - viewOffset.x, m_position.y + m_radius - m_origin.y - viewOffset.y, 0, m_radius, m_outlineColor.getColorValue(), m_outlineColor.getColorValue(), m_outlineColor.getColorValue(), m_outlineColor.getColorValue());
+        C2D_DrawCircle(m_position.x + m_radius - m_origin.x - vo.x, m_position.y + m_radius - m_origin.y - vo.y, 0, m_radius, m_outlineColor.getColorValue(), m_outlineColor.getColorValue(), m_outlineColor.getColorValue(), m_outlineColor.getColorValue());
     }
-    C2D_DrawCircle(m_position.x + m_radius - m_origin.x - viewOffset.x, m_position.y + m_radius - m_origin.y - viewOffset.y, 0, m_radius - m_outlineThickness, m_fillColor.getColorValue(), m_fillColor.getColorValue(), m_fillColor.getColorValue(), m_fillColor.getColorValue());
+    C2D_DrawCircle(m_position.x + m_radius - m_origin.x - vo.x, m_position.y + m_radius - m_origin.y - vo.y, 0, m_radius - m_outlineThickness, m_fillColor.getColorValue(), m_fillColor.getColorValue(), m_fillColor.getColorValue(), m_fillColor.getColorValue());
 }

@@ -73,14 +73,20 @@ Limitations</h2>
 <p>Dualie is very early in development and currently only supports bare bones graphics programming. Contributions are welcome in any area.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Documentation</h2>
-<p>Dualie lacks documentation, but aims to be fairly intutive and similar to SFML. As always, contributions in this department are more than welcome.</p>
+<p>You can find the documentation for dualie <a href="http://dogbonee.github.io/Dualie">here</a>. Not many examples of the library currently exist, however you can see a port of tetris that I made using the library <a href="https://github.com/Dogbonee/3DS_Tetritime">here</a>.</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
 How to build</h2>
 <p>DevkitPro is required to build this library. To build, set -DCMAKE_TOOLCHAIN_FILE to wherever 3DS.cmake lies in your filesystem, then build the project normally using CMake.</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 How to use</h2>
-<p>Use <code>target_link_libraries</code> to link &lt;path/to/libdualie.a&gt;, citro2d, citro3d, ctru, m <br  />
- Use <code>target_include_directories</code> to the libraries include directory, then build with devkitPro similar to the library build process.</p>
+<p>Use these lines to link audio: </p><div class="fragment"><div class="line">find_package(PkgConfig REQUIRED)</div>
+<div class="line">pkg_check_modules(OPUSFILE REQUIRED IMPORTED_TARGET opusfile)</div>
+<div class="line"> </div>
+<div class="line">target_include_directories(${PROJECT_NAME} PRIVATE include)</div>
+<div class="line">target_include_directories(${PROJECT_NAME} PRIVATE pkg-config opusfile)</div>
+<div class="line">target_link_libraries(${PROJECT_NAME} PkgConfig::OPUSFILE)</div>
+</div><!-- fragment --><p>Use <code>target_link_libraries</code> to link <code>&lt;path/to/libdualie.a&gt;, citro2d, citro3d, ctru, m</code></p>
+<p>Use <code>target_include_directories</code> to the libraries include directory, then build with devkitPro similar to the library build process.</p>
 <h1><a class="anchor" id="autotoc_md6"></a>
 Example</h1>
 <p>Similarly to SFML, graphics revolve around a RenderWindow object, and draw targets can be selected in the clear function. Below is a simple program that draws a rectangle to the top screen and a circle to the bottom screen.</p>

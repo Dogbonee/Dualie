@@ -43,7 +43,8 @@ const float& dl::Sprite::getRotation()
 
 void dl::Sprite::draw(const dl::Vector2f &viewOffset)
 {
-    C2D_SpriteSetPos(&m_sprite, m_position.x - m_origin.x - viewOffset.x, m_position.y - m_origin.y - viewOffset.y);
+    auto vo = m_bViewDoesAffect ? viewOffset : dl::Vector2f(0,0);
+    C2D_SpriteSetPos(&m_sprite, m_position.x - m_origin.x - vo.x, m_position.y - m_origin.y - vo.y);
     C2D_DrawSprite(&m_sprite);
 }
 

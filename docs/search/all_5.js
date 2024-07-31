@@ -14,6 +14,5 @@ var searchData=
   ['getscale_39',['getScale',['../classdl_1_1Text.html#ae089de4e5e938e0e2e4f5941278b0d93',1,'dl::Text']]],
   ['getsize_40',['getSize',['../classdl_1_1Shape.html#aa7713b1d4ef6d23ae49137f37339f9b9',1,'dl::Shape']]],
   ['getstring_41',['getString',['../classdl_1_1Text.html#ab88fa9e662132a6773b3cfc62992be8f',1,'dl::Text']]],
-  ['getwidth_42',['getWidth',['../classdl_1_1Text.html#a327aaeaae7775d1ee9934915dfe8f883',1,'dl::Text']]],
-  ['green_43',['Green',['../classdl_1_1Color.html#ae35c8350dbe3c1142a78544183522731',1,'dl::Color']]]
+  ['green_42',['Green',['../classdl_1_1Color.html#ae35c8350dbe3c1142a78544183522731',1,'dl::Color']]]
 ];
