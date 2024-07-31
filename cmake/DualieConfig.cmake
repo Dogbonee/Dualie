@@ -2,7 +2,7 @@
 #One can link to dualie by calling target_link_libraries(${PROJECT_NAME} ${DUALIE_LIBRARY})
 find_path(DUALIE_INCLUDE_DIRS
     NAMES Dualie.hpp
-    PATHS ${DEVKITPRO}/portlibs/3ds/include/
+    PATHS ${DEVKITPRO}/portlibs/3ds/include/Dualie
 )
 
 find_library(DUALIE_LIBRARY
