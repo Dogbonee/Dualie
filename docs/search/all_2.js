@@ -1,7 +1,7 @@
 var searchData=
 [
   ['circleshape_4',['CircleShape',['../classdl_1_1CircleShape.html',1,'dl']]],
-  ['clear_5',['clear',['../classdl_1_1RenderWindow.html#ad4ce9c8ce1d83d978b193d070b78f68a',1,'dl::RenderWindow']]],
+  ['clear_5',['clear',['../classdl_1_1RenderWindow.html#a6a8e5e58c8bcd83ad75c2c90c54ff4d9',1,'dl::RenderWindow']]],
   ['color_6',['Color',['../classdl_1_1Color.html',1,'dl']]],
   ['contains_7',['contains',['../classdl_1_1Rect.html#ada50e3797ed625082bcf4676742e1830',1,'dl::Rect']]],
   ['cpad_5fdown_8',['CPAD_DOWN',['../namespacedl_1_1Input.html#a9d849945cc263a13889898718ae5b3a4aac2fc99a6729d79e3f113f733e331e72',1,'dl::Input']]],
