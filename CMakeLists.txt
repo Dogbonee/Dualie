@@ -36,6 +36,7 @@ add_library(dualie STATIC
         include/Dualie/Graphics/Sprite.hpp
         src/Dualie/Graphics/SpriteSheet.cpp
         include/Dualie/Graphics/SpriteSheet.hpp
+        src/Dualie/Graphics/Drawable.cpp
 )
 
 find_package(PkgConfig REQUIRED)

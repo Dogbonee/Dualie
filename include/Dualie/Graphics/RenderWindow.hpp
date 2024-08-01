@@ -10,12 +10,13 @@
 #include <Dualie/System/Input.hpp>
 #include <Dualie/Graphics/View.hpp>
 #include <Dualie/Audio/Music.hpp>
+#include <vector>
 
 namespace dl {
 
     enum SCREEN {
         TOP_SCREEN = 0,
-        BOTTOM_SCREEN = 1
+        BOTTOM_SCREEN = 2
     };
 
 
@@ -52,7 +53,7 @@ namespace dl {
          * @param screen    The screen to clear
          * @param color     The clear color
          */
-        void clear(SCREEN screen, Color color = dl::Color(255, 255, 255));
+        void clear(SCREEN screen, Color color = dl::Color(0,0,0));
 
         /**
          * @brief Draws a drawable to the screen
@@ -80,6 +81,12 @@ namespace dl {
         void setView(const dl::View& view);
 
         /**
+         * @brief Determines whether the stereoscopic 3d effect should be active or not
+         * @param active    Whether the effect is active
+         */
+        void set3dActive(bool active);
+
+        /**
          * @brief Gets the current render offset in pixels that the current view causes
          * @return  The render offset in pixels that the current view causes
          */
@@ -88,8 +95,11 @@ namespace dl {
 
 
     private:
-        C3D_RenderTarget* m_screens[2];
+        C3D_RenderTarget* m_screens[3];
+        SCREEN m_currentScreen;
         dl::View m_view;
+        bool m_3dActive;
+        std::vector<dl::Drawable*> m_drawQueue;
 
 
     };
