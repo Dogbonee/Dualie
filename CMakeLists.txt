@@ -37,6 +37,10 @@ add_library(dualie STATIC
         src/Dualie/Graphics/SpriteSheet.cpp
         include/Dualie/Graphics/SpriteSheet.hpp
         src/Dualie/Graphics/Drawable.cpp
+        src/Dualie/System/Clock.cpp
+        include/Dualie/System/Clock.hpp
+        src/Dualie/System/Time.cpp
+        include/Dualie/System/Time.hpp
 )
 
 find_package(PkgConfig REQUIRED)

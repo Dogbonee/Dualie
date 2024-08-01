@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['updatedynamictext_184',['updateDynamicText',['../classdl_1_1Text.html#af0e02a0b08d750e14ddb4f86fddd7f44',1,'dl::Text']]]
+  ['time_195',['Time',['../classdl_1_1Time.html#ab690c4d231fde89746b286e66aab5253',1,'dl::Time']]],
+  ['tostring_196',['toString',['../classdl_1_1Vector2.html#a3ca8b7348570dd56bcd4f526f6b7c85a',1,'dl::Vector2']]]
 ];
