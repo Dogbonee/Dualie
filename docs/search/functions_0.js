@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['clear_128',['clear',['../classdl_1_1RenderWindow.html#ad4ce9c8ce1d83d978b193d070b78f68a',1,'dl::RenderWindow']]],
-  ['contains_129',['contains',['../classdl_1_1Rect.html#ada50e3797ed625082bcf4676742e1830',1,'dl::Rect']]]
+  ['clear_131',['clear',['../classdl_1_1RenderWindow.html#a6a8e5e58c8bcd83ad75c2c90c54ff4d9',1,'dl::RenderWindow']]],
+  ['contains_132',['contains',['../classdl_1_1Rect.html#ada50e3797ed625082bcf4676742e1830',1,'dl::Rect']]]
 ];

@@ -8,6 +8,7 @@
 u32 dl::Input::KeyPressedMask = 0;
 u32 dl::Input::KeyHeldMask = 0;
 u32 dl::Input::KeyReleasedMask = 0;
+float dl::Input::SliderValue = 0;
 dl::Vector2f dl::Input::TouchPosition = dl::Vector2f(0,0);
 dl::Vector2f dl::Input::LastTouchPosition = dl::Vector2f(0,0);
 
@@ -27,6 +28,7 @@ void dl::Input::updateInput() {
     KeyPressedMask = hidKeysDown();
     KeyHeldMask = hidKeysHeld();
     KeyReleasedMask = hidKeysUp();
+    SliderValue = osGet3DSliderState();
 
     touchPosition touch;
     hidTouchRead(&touch);
@@ -34,4 +36,7 @@ void dl::Input::updateInput() {
     if(TouchPosition.x + TouchPosition.y != 0){
         LastTouchPosition = TouchPosition;
     }
+
+
+
 }

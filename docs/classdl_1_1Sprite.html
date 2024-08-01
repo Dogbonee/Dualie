@@ -124,6 +124,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa253dbe1c0ccacda939389b7c3e50524 inherit pub_methods_classdl_1_1Drawable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Drawable.html#aa253dbe1c0ccacda939389b7c3e50524">viewShouldAffect</a> (bool effective)</td></tr>
 <tr class="memdesc:aa253dbe1c0ccacda939389b7c3e50524 inherit pub_methods_classdl_1_1Drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the current view should affect the position of the drawable. Otherwise, its position on the screen will be absolute.  <a href="classdl_1_1Drawable.html#aa253dbe1c0ccacda939389b7c3e50524">More...</a><br /></td></tr>
 <tr class="separator:aa253dbe1c0ccacda939389b7c3e50524 inherit pub_methods_classdl_1_1Drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60a251e4bddc499ba48ffc1a8842b04 inherit pub_methods_classdl_1_1Drawable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Drawable.html#af60a251e4bddc499ba48ffc1a8842b04">setDepth</a> (float depth)</td></tr>
+<tr class="memdesc:af60a251e4bddc499ba48ffc1a8842b04 inherit pub_methods_classdl_1_1Drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the depth of the drawable for 3d. This simply corresponds to the X offset calculated for the 2 separate top screens. Larger objects will require a deeper depth for the 3d effect to be noticable. A positive value will cause the drawable to sink into the screen, while a negative value will cause it to pop out.  <a href="classdl_1_1Drawable.html#af60a251e4bddc499ba48ffc1a8842b04">More...</a><br /></td></tr>
+<tr class="separator:af60a251e4bddc499ba48ffc1a8842b04 inherit pub_methods_classdl_1_1Drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d88acdeddb4533a930e4b9b1946f7d inherit pub_methods_classdl_1_1Drawable"><td class="memItemLeft" align="right" valign="top">const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Drawable.html#ab9d88acdeddb4533a930e4b9b1946f7d">getDepth</a> () const</td></tr>
+<tr class="separator:ab9d88acdeddb4533a930e4b9b1946f7d inherit pub_methods_classdl_1_1Drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -141,6 +146,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a52b3d305b8fbd2ac7f48cab591f1edbd inherit pro_attribs_classdl_1_1Drawable"><td class="memItemLeft" align="right" valign="top"><a id="a52b3d305b8fbd2ac7f48cab591f1edbd"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bViewDoesAffect</b> = true</td></tr>
 <tr class="separator:a52b3d305b8fbd2ac7f48cab591f1edbd inherit pro_attribs_classdl_1_1Drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59295eba713165f3679c07cf86ca5aeb inherit pro_attribs_classdl_1_1Drawable"><td class="memItemLeft" align="right" valign="top"><a id="a59295eba713165f3679c07cf86ca5aeb"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>m_depth</b> = 0.0f</td></tr>
+<tr class="separator:a59295eba713165f3679c07cf86ca5aeb inherit pro_attribs_classdl_1_1Drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class used to handle the drawing and transformation of sprites. </p>

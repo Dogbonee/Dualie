@@ -89,6 +89,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa253dbe1c0ccacda939389b7c3e50524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Drawable.html#aa253dbe1c0ccacda939389b7c3e50524">viewShouldAffect</a> (bool effective)</td></tr>
 <tr class="memdesc:aa253dbe1c0ccacda939389b7c3e50524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the current view should affect the position of the drawable. Otherwise, its position on the screen will be absolute.  <a href="classdl_1_1Drawable.html#aa253dbe1c0ccacda939389b7c3e50524">More...</a><br /></td></tr>
 <tr class="separator:aa253dbe1c0ccacda939389b7c3e50524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60a251e4bddc499ba48ffc1a8842b04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Drawable.html#af60a251e4bddc499ba48ffc1a8842b04">setDepth</a> (float depth)</td></tr>
+<tr class="memdesc:af60a251e4bddc499ba48ffc1a8842b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the depth of the drawable for 3d. This simply corresponds to the X offset calculated for the 2 separate top screens. Larger objects will require a deeper depth for the 3d effect to be noticable. A positive value will cause the drawable to sink into the screen, while a negative value will cause it to pop out.  <a href="classdl_1_1Drawable.html#af60a251e4bddc499ba48ffc1a8842b04">More...</a><br /></td></tr>
+<tr class="separator:af60a251e4bddc499ba48ffc1a8842b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d88acdeddb4533a930e4b9b1946f7d"><td class="memItemLeft" align="right" valign="top">const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Drawable.html#ab9d88acdeddb4533a930e4b9b1946f7d">getDepth</a> () const</td></tr>
+<tr class="separator:ab9d88acdeddb4533a930e4b9b1946f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cab96e84d4ca9fe80af4e1eb8770f92"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Drawable.html#a4cab96e84d4ca9fe80af4e1eb8770f92">draw</a> (const <a class="el" href="classdl_1_1Vector2.html">dl::Vector2f</a> &amp;viewOffset)=0</td></tr>
 <tr class="memdesc:a4cab96e84d4ca9fe80af4e1eb8770f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the drawable to the screen.  <a href="classdl_1_1Drawable.html#a4cab96e84d4ca9fe80af4e1eb8770f92">More...</a><br /></td></tr>
 <tr class="separator:a4cab96e84d4ca9fe80af4e1eb8770f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,6 +103,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a52b3d305b8fbd2ac7f48cab591f1edbd"><td class="memItemLeft" align="right" valign="top"><a id="a52b3d305b8fbd2ac7f48cab591f1edbd"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bViewDoesAffect</b> = true</td></tr>
 <tr class="separator:a52b3d305b8fbd2ac7f48cab591f1edbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59295eba713165f3679c07cf86ca5aeb"><td class="memItemLeft" align="right" valign="top"><a id="a59295eba713165f3679c07cf86ca5aeb"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>m_depth</b> = 0.0f</td></tr>
+<tr class="separator:a59295eba713165f3679c07cf86ca5aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The base class for any object that can be drawn to the screen. </p>
@@ -138,14 +146,55 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bViewDoesAffect</b>
 
 </div>
 </div>
+<a id="ab9d88acdeddb4533a930e4b9b1946f7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d88acdeddb4533a930e4b9b1946f7d">&#9670;&nbsp;</a></span>getDepth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float &amp; dl::Drawable::getDepth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The depth of the drawable </dd></dl>
+
+</div>
+</div>
+<a id="af60a251e4bddc499ba48ffc1a8842b04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af60a251e4bddc499ba48ffc1a8842b04">&#9670;&nbsp;</a></span>setDepth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dl::Drawable::setDepth </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>depth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the depth of the drawable for 3d. This simply corresponds to the X offset calculated for the 2 separate top screens. Larger objects will require a deeper depth for the 3d effect to be noticable. A positive value will cause the drawable to sink into the screen, while a negative value will cause it to pop out. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">depth</td><td>The depth of the object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa253dbe1c0ccacda939389b7c3e50524"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa253dbe1c0ccacda939389b7c3e50524">&#9670;&nbsp;</a></span>viewShouldAffect()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void dl::Drawable::viewShouldAffect </td>
@@ -155,11 +204,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bViewDoesAffect</b>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Set whether the current view should affect the position of the drawable. Otherwise, its position on the screen will be absolute. </p>
@@ -172,8 +216,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bViewDoesAffect</b>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/Dualie/Graphics/<a class="el" href="Drawable_8hpp_source.html">Drawable.hpp</a></li>
+<li>src/Dualie/Graphics/Drawable.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

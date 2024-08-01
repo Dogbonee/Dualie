@@ -16,6 +16,7 @@ namespace dl {
 
     protected:
         bool m_bViewDoesAffect = true;
+        float m_depth = 0.0f;
 
     public:
 
@@ -24,10 +25,22 @@ namespace dl {
          * on the screen will be absolute
          * @param effective     Whether the view will be effective on this drawable
          */
-        void viewShouldAffect(bool effective)
-        {
-            m_bViewDoesAffect = effective;
-        }
+        void viewShouldAffect(bool effective);
+
+
+        /**
+         * @brief Sets the depth of the drawable for 3d. This simply corresponds to the X offset calculated for the 2 separate
+         * top screens. Larger objects will require a deeper depth for the 3d effect to be noticable. A positive value will cause
+         * the drawable to sink into the screen, while a negative value will cause it to pop out.
+         * @param depth     The depth of the object
+         */
+        void setDepth(float depth);
+
+        /**
+         *
+         * @return  The depth of the drawable
+         */
+        const float& getDepth() const;
 
         /**
          * @brief Draws the drawable to the screen
