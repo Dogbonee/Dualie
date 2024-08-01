@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="dl::View",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1View.html",tooltip="Used as a camera-like object to move the screen view to different positions in world coordinates."];
+  Node0 [label="dl::Vector2\< float \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1Vector2.html",tooltip=" "];
 }

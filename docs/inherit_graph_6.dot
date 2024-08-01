@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="dl::SpriteSheet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1SpriteSheet.html",tooltip="A class used to load and contain t3x formatted spritesheets."];
+  Node0 [label="dl::RenderWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdl_1_1RenderWindow.html",tooltip="A interface for rendering. Includes both top and bottoms screens as targets."];
 }

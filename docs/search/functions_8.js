@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['reset_162',['reset',['../classdl_1_1View.html#a5b2b0a6d81ee5c296fc8123cbd712ac8',1,'dl::View']]],
-  ['restart_163',['restart',['../classdl_1_1Music.html#a9bdede70d654c8565d861002370aa3cb',1,'dl::Music']]],
-  ['rotate_164',['rotate',['../classdl_1_1Sprite.html#a50d33acd3fd6b50416c802c1fba49fd3',1,'dl::Sprite']]]
+  ['play_172',['play',['../classdl_1_1Music.html#ab35ca0f8e2c175900a0540536782c5a4',1,'dl::Music']]],
+  ['print_173',['print',['../classdl_1_1RenderWindow.html#abe7f53ce0e7db44d375486328cc06b46',1,'dl::RenderWindow']]]
 ];
