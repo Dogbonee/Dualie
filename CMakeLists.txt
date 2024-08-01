@@ -41,6 +41,7 @@ add_library(dualie STATIC
         include/Dualie/System/Clock.hpp
         src/Dualie/System/Time.cpp
         include/Dualie/System/Time.hpp
+        include/Dualie/System.hpp
 )
 
 find_package(PkgConfig REQUIRED)
