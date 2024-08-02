@@ -29,9 +29,9 @@ cmake_minimum_required(VERSION 3.28)
 project(Dualie_Demo)
 set(CMAKE_CXX_STANDARD 17)
 set(Dualie_DIR "<DualieRoot>/cmake")
-set(CMAKE_PREFIX_PATH ${Dualie_DIR}
+set(CMAKE_PREFIX_PATH ${Dualie_DIR})
 find_package(Dualie REQUIRED)
-add_executable(Dualie_Demo main.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 target_link_libraries(${PROJECT_NAME} ${DUALIE_LIBRARY})
 target_compile_options(${PROJECT_NAME} PRIVATE
         -g -O2 -Wall
