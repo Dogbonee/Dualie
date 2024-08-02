@@ -13,6 +13,7 @@ dl::Music::Music()
 
 dl::Music::~Music()
 {
+    stop();
     ndspChnReset(0);
     linearFree(m_audioBuffer);
     op_free(m_opusFile);
@@ -65,6 +66,10 @@ void dl::Music::restart()
 
 void dl::Music::stop()
 {
+    if(m_quit)
+    {
+        return;
+    }
     m_quit = true;
     LightEvent_Signal(&m_event);
 
