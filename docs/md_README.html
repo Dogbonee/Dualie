@@ -73,19 +73,20 @@ Limitations</h2>
 <p>Dualie is very early in development and currently only supports bare bones graphics programming. Contributions are welcome in any area.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Documentation</h2>
-<p>You can find the documentation for dualie <a href="http://dogbonee.github.io/Dualie">here</a>. Not many examples of the library currently exist, however you can see a port of tetris that I made using the library <a href="https://github.com/Dogbonee/3DS_Tetritime">here</a>.</p>
+<p>You can find the documentation for dualie <a href="http://dogbonee.github.io/Dualie">here</a>. Not many examples of the library currently exist, however you can see a port of tetris that made using the library <a href="https://github.com/Dogbonee/3DS_Tetritime">here</a>.</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
 How to build</h2>
-<p>DevkitPro is required to build this library. To build, set -DCMAKE_TOOLCHAIN_FILE to wherever 3DS.cmake lies in your filesystem, then build the project normally using CMake. You can install the library by using <code>make install</code> or <code>ninja install</code>. Note that the <code>DEVKITPRO</code> environment variable needs to be correctly set.</p>
+<p>DevkitPro is required to build this library. Dualie also depends on libopusfile and pkg-config, which can be installed through devkitPro's pacman package manager like so: <code>pacman -S 3ds-opusfile 3ds-pkg-config</code> To build, set -DCMAKE_TOOLCHAIN_FILE to wherever 3DS.cmake lies in your filesystem, then build the project normally using CMake. You can install the library by using <code>make install</code> or <code>ninja install</code>. Note that the <code>DEVKITPRO</code> environment variable needs to be correctly set.</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 How to use</h2>
-<p>Similar to building, <code>CMAKE_TOOLCHAIN_FILE</code> must be set to the 3ds.cmake file. <code>Dualie_DIR</code> then needs to be set to the cmake directory located in the dualie root directory. Then one can link to the library by simply using <br  />
- <code>target_link_libraries(${PROJECT_NAME} ${DUALIE_LIBRARY})</code> <br  />
- Below is a sample CMakeLists.txt that fully links the library and its dependencies:</p>
+<p>Similar to building, libopusfile and pkg-config must be installed, and <code>CMAKE_TOOLCHAIN_FILE</code> must be set to the 3ds.cmake file. <code>Dualie_DIR</code> then needs to be set to the cmake directory located in the dualie root directory. If the config file cannot be found, set <code>CMAKE_PREFIX_PATH</code> to the Dualie_DIR variable like so: <code>set(CMAKE_PREFIX_PATH ${Dualie_DIR}</code> Then one can link to the library normally: <code>target_link_libraries(${PROJECT_NAME} ${DUALIE_LIBRARY})</code> <br  />
+</p>
+<p>Below is a sample CMakeLists.txt that fully links the library and its dependencies:</p>
 <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.28)</div>
 <div class="line">project(Dualie_Demo)</div>
 <div class="line">set(CMAKE_CXX_STANDARD 17)</div>
 <div class="line">set(Dualie_DIR &quot;&lt;DualieRoot&gt;/cmake&quot;)</div>
+<div class="line">set(CMAKE_PREFIX_PATH ${Dualie_DIR}</div>
 <div class="line">find_package(Dualie REQUIRED)</div>
 <div class="line">add_executable(Dualie_Demo main.cpp)</div>
 <div class="line">target_link_libraries(${PROJECT_NAME} ${DUALIE_LIBRARY})</div>

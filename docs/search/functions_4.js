@@ -8,7 +8,7 @@ var searchData=
   ['getglobalbounds_152',['getGlobalBounds',['../classdl_1_1Shape.html#ab55b649d5814434831e468df907720f8',1,'dl::Shape']]],
   ['getlocalbounds_153',['getLocalBounds',['../classdl_1_1Shape.html#a74eaea2312ccf62a1e6bd9692acd4b8f',1,'dl::Shape']]],
   ['getoffset_154',['getOffset',['../classdl_1_1View.html#a02fb385a46011f8baaf5968626c3bead',1,'dl::View']]],
-  ['getorigin_155',['getOrigin',['../classdl_1_1Shape.html#aec6cc31f7c13502719e569ba25e15e3d',1,'dl::Shape::getOrigin()'],['../classdl_1_1Text.html#af20f47847f2390fa894e2c0347159edf',1,'dl::Text::getOrigin()']]],
+  ['getorigin_155',['getOrigin',['../classdl_1_1Sprite.html#af7b432e1a0ac3dfb8e7af1a6e58b9ddc',1,'dl::Sprite::getOrigin()'],['../classdl_1_1Text.html#af20f47847f2390fa894e2c0347159edf',1,'dl::Text::getOrigin()'],['../classdl_1_1Shape.html#aec6cc31f7c13502719e569ba25e15e3d',1,'dl::Shape::getOrigin()']]],
   ['getoutlinecolor_156',['getOutlineColor',['../classdl_1_1Shape.html#aa9a797c4e177dc97291469e48d24f66f',1,'dl::Shape']]],
   ['getoutlinethickness_157',['getOutlineThickness',['../classdl_1_1Shape.html#a15ad0c064b2da78c6473fac05a306b47',1,'dl::Shape']]],
   ['getposition_158',['getPosition',['../classdl_1_1Transformable.html#a11000a77c4bd7b18483b29b5127b2956',1,'dl::Transformable']]],

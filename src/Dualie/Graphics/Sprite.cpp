@@ -53,6 +53,21 @@ void dl::Sprite::loadFromSpriteSheet(SpriteSheet spriteSheet, size_t index)
     C2D_SpriteFromSheet(&m_sprite, spriteSheet.getSpriteSheet(), index);
 }
 
+void dl::Sprite::setOrigin(const dl::Vector2f &origin)
+{
+    m_origin = origin;
+}
+
+void dl::Sprite::setOrigin(float x, float y)
+{
+    m_origin = dl::Vector2f(x,y);
+}
+
+const dl::Vector2f &dl::Sprite::getOrigin()
+{
+    return m_origin;
+}
+
 
 
 
