@@ -100,9 +100,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aadf39ca86a838792a5cc24a8575ac66c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Sprite.html#aadf39ca86a838792a5cc24a8575ac66c">move</a> (const <a class="el" href="classdl_1_1Vector2.html">dl::Vector2f</a> &amp;offset) override</td></tr>
 <tr class="memdesc:aadf39ca86a838792a5cc24a8575ac66c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the sprite offset number of pixels.  <a href="classdl_1_1Sprite.html#aadf39ca86a838792a5cc24a8575ac66c">More...</a><br /></td></tr>
 <tr class="separator:aadf39ca86a838792a5cc24a8575ac66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1544a08efb7189eb4d4652721320a06b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Sprite.html#a1544a08efb7189eb4d4652721320a06b">setOrigin</a> (const <a class="el" href="classdl_1_1Vector2.html">dl::Vector2f</a> &amp;origin)</td></tr>
+<tr class="memdesc:a1544a08efb7189eb4d4652721320a06b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the rotation of the sprite in radians.  <a href="classdl_1_1Sprite.html#a1544a08efb7189eb4d4652721320a06b">More...</a><br /></td></tr>
+<tr class="separator:a1544a08efb7189eb4d4652721320a06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae661c6a4b6420889e310d78deca9823e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Sprite.html#ae661c6a4b6420889e310d78deca9823e">setOrigin</a> (float x, float y)</td></tr>
+<tr class="memdesc:ae661c6a4b6420889e310d78deca9823e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds. Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size will cause the shape to be centered on its position.  <a href="classdl_1_1Sprite.html#ae661c6a4b6420889e310d78deca9823e">More...</a><br /></td></tr>
+<tr class="separator:ae661c6a4b6420889e310d78deca9823e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9772753c8d28f9fce2032e2db1f4126f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Sprite.html#a9772753c8d28f9fce2032e2db1f4126f">setRotation</a> (const float &amp;rotation)</td></tr>
-<tr class="memdesc:a9772753c8d28f9fce2032e2db1f4126f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the rotation of the sprite in radians.  <a href="classdl_1_1Sprite.html#a9772753c8d28f9fce2032e2db1f4126f">More...</a><br /></td></tr>
+<tr class="memdesc:a9772753c8d28f9fce2032e2db1f4126f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the rotation of the sprite.  <a href="classdl_1_1Sprite.html#a9772753c8d28f9fce2032e2db1f4126f">More...</a><br /></td></tr>
 <tr class="separator:a9772753c8d28f9fce2032e2db1f4126f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b432e1a0ac3dfb8e7af1a6e58b9ddc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdl_1_1Vector2.html">dl::Vector2f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Sprite.html#af7b432e1a0ac3dfb8e7af1a6e58b9ddc">getOrigin</a> ()</td></tr>
+<tr class="separator:af7b432e1a0ac3dfb8e7af1a6e58b9ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b08a9f82148c64b00ca3d827d39a3fe"><td class="memItemLeft" align="right" valign="top">const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Sprite.html#a5b08a9f82148c64b00ca3d827d39a3fe">getRotation</a> ()</td></tr>
 <tr class="separator:a5b08a9f82148c64b00ca3d827d39a3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50d33acd3fd6b50416c802c1fba49fd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Sprite.html#a50d33acd3fd6b50416c802c1fba49fd3">rotate</a> (const float &amp;rotationOffset)</td></tr>
@@ -186,6 +194,24 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>m_depth</b> = 0.0f</
 </dl>
 
 <p>Implements <a class="el" href="classdl_1_1Drawable.html#a4cab96e84d4ca9fe80af4e1eb8770f92">dl::Drawable</a>.</p>
+
+</div>
+</div>
+<a id="af7b432e1a0ac3dfb8e7af1a6e58b9ddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b432e1a0ac3dfb8e7af1a6e58b9ddc">&#9670;&nbsp;</a></span>getOrigin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdl_1_1Vector2.html">dl::Vector2f</a> &amp; dl::Sprite::getOrigin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The origin in pixels </dd></dl>
 
 </div>
 </div>
@@ -306,6 +332,75 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>m_depth</b> = 0.0f</
 
 </div>
 </div>
+<a id="a1544a08efb7189eb4d4652721320a06b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1544a08efb7189eb4d4652721320a06b">&#9670;&nbsp;</a></span>setOrigin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dl::Sprite::setOrigin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdl_1_1Vector2.html">dl::Vector2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>origin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the rotation of the sprite in radians. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotation</td><td>The rotation to set (in radians)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds. Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size will cause the shape to be centered on its position. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>The origin in pixels </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae661c6a4b6420889e310d78deca9823e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae661c6a4b6420889e310d78deca9823e">&#9670;&nbsp;</a></span>setOrigin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dl::Sprite::setOrigin </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds. Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size will cause the shape to be centered on its position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The origin in pixels (X) </td></tr>
+    <tr><td class="paramname">y</td><td>The origin in pixels (Y) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9a65124785235e856b0dd484347ad43e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a65124785235e856b0dd484347ad43e">&#9670;&nbsp;</a></span>setPosition()</h2>
 
@@ -358,10 +453,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>m_depth</b> = 0.0f</
       </table>
 </div><div class="memdoc">
 
-<p>Sets the rotation of the sprite in radians. </p>
+<p>Sets the rotation of the sprite. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rotation</td><td>The rotation to set (in radians) </td></tr>
+    <tr><td class="paramname">rotation</td><td>The rotation in radians </td></tr>
   </table>
   </dd>
 </dl>

@@ -50,7 +50,34 @@ namespace dl
          * @brief Sets the rotation of the sprite in radians
          * @param rotation  The rotation to set (in radians)
          */
+
+        /**
+         * @brief Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds.
+         * Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size
+         * will cause the shape to be centered on its position.
+         * @param origin    The origin in pixels
+         */
+        void setOrigin(const dl::Vector2f& origin);
+
+        /**
+         * @brief Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds.
+         * Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size
+         * will cause the shape to be centered on its position.
+         * @param x    The origin in pixels (X)
+         * @param y    The origin in pixels (Y)
+         */
+        void setOrigin(float x, float y);
+
+        /**
+         * @brief Sets the rotation of the sprite
+         * @param rotation  The rotation in radians
+         */
         void setRotation(const float &rotation);
+
+        /**
+         * @return The origin in pixels
+         */
+        const dl::Vector2f& getOrigin();
 
         /**
          * @return The sprite's rotation in radians
