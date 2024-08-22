@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['shape_128',['Shape',['../classdl_1_1Shape.html',1,'dl']]],
-  ['sprite_129',['Sprite',['../classdl_1_1Sprite.html',1,'dl']]],
-  ['spritesheet_130',['SpriteSheet',['../classdl_1_1SpriteSheet.html',1,'dl']]]
+  ['rect_126',['Rect',['../classdl_1_1Rect.html',1,'dl']]],
+  ['rect_3c_20float_20_3e_127',['Rect&lt; float &gt;',['../classdl_1_1Rect.html',1,'dl']]],
+  ['rectangleshape_128',['RectangleShape',['../classdl_1_1RectangleShape.html',1,'dl']]],
+  ['renderwindow_129',['RenderWindow',['../classdl_1_1RenderWindow.html',1,'dl']]]
 ];

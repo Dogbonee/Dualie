@@ -86,9 +86,9 @@ How to use</h2>
 <div class="line">project(Dualie_Demo)</div>
 <div class="line">set(CMAKE_CXX_STANDARD 17)</div>
 <div class="line">set(Dualie_DIR &quot;&lt;DualieRoot&gt;/cmake&quot;)</div>
-<div class="line">set(CMAKE_PREFIX_PATH ${Dualie_DIR}</div>
+<div class="line">set(CMAKE_PREFIX_PATH ${Dualie_DIR})</div>
 <div class="line">find_package(Dualie REQUIRED)</div>
-<div class="line">add_executable(Dualie_Demo main.cpp)</div>
+<div class="line">add_executable(${PROJECT_NAME} main.cpp)</div>
 <div class="line">target_link_libraries(${PROJECT_NAME} ${DUALIE_LIBRARY})</div>
 <div class="line">target_compile_options(${PROJECT_NAME} PRIVATE</div>
 <div class="line">        -g -O2 -Wall</div>

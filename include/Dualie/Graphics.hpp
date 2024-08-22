@@ -16,6 +16,6 @@
 #include <Dualie/Graphics/Text.hpp>
 #include <Dualie/Graphics/SpriteSheet.hpp>
 #include <Dualie/Graphics/Sprite.hpp>
-
+#include <Dualie/Graphics/Line.hpp>
 
 #endif //DUALIE_GRAPHICS_HPP
