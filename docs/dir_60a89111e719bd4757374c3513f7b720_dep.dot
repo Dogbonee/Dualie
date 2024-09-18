@@ -1,0 +1,18 @@
+digraph "src/Dualie"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_68267d1309a1af8e8297ef4c3efbcdba {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="src", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html",tooltip=""]
+  subgraph clusterdir_60a89111e719bd4757374c3513f7b720 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_60a89111e719bd4757374c3513f7b720.html",tooltip=""]
+    dir_60a89111e719bd4757374c3513f7b720 [shape=plaintext, label="Dualie"];
+  dir_89b4e3ee6598a83a543110d4f18c174c [label="Audio", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_89b4e3ee6598a83a543110d4f18c174c.html",tooltip=""];
+  dir_a3599c646dc061b86ef969459399d997 [label="Graphics", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_a3599c646dc061b86ef969459399d997.html",tooltip=""];
+  dir_23d50c6509de3f9778133a410fe45b76 [label="System", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_23d50c6509de3f9778133a410fe45b76.html",tooltip=""];
+  }
+  }
+}
