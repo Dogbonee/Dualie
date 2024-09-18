@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['l_56',['L',['../namespacedl_1_1Input.html#a9d849945cc263a13889898718ae5b3a4a04be2a2b3eb00aa40d06fb4fd98c945f',1,'dl::Input']]],
-  ['lasttouchposition_57',['LastTouchPosition',['../namespacedl_1_1Input.html#a5309db81024498d3e18bf3506aeb9865',1,'dl::Input']]],
-  ['left_58',['LEFT',['../namespacedl_1_1Input.html#a9d849945cc263a13889898718ae5b3a4acb0fcf91c4d1460e617cedf2c2ac3ca3',1,'dl::Input']]],
-  ['line_59',['Line',['../classdl_1_1Line.html',1,'dl']]],
-  ['loadfromfile_60',['loadFromFile',['../classdl_1_1Music.html#afa06f967812496c67c4b6a4c13d6ce8c',1,'dl::Music::loadFromFile()'],['../classdl_1_1SpriteSheet.html#aa2834df1df7f308af0b83f19da66594a',1,'dl::SpriteSheet::loadFromFile()']]],
-  ['loadfromspritesheet_61',['loadFromSpriteSheet',['../classdl_1_1Sprite.html#a0c251118477876b8e9baa0be778de6fa',1,'dl::Sprite']]]
+  ['initprintscreen_0',['InitPrintScreen',['../classdl_1_1RenderWindow.html#a6ae5b0e7b4c93da46f0c03bbf767c52e',1,'dl::RenderWindow']]],
+  ['intersects_1',['intersects',['../classdl_1_1Rect.html#a315e5af847cdb7f0dcc01ddfb28a946b',1,'dl::Rect']]],
+  ['is_20it_2',['What is it?',['../md_README.html#autotoc_md1',1,'']]],
+  ['iskeyheld_3',['isKeyHeld',['../namespacedl_1_1Input.html#a7aa2a9b9ace2d84d8f6a1026a05c1430',1,'dl::Input']]],
+  ['iskeypressed_4',['isKeyPressed',['../namespacedl_1_1Input.html#a0e2bee1148351600b8d90c64800148d3',1,'dl::Input']]],
+  ['iskeyreleased_5',['isKeyReleased',['../namespacedl_1_1Input.html#a2b19782a6c5353e872e0ee81d5d0fee9',1,'dl::Input']]],
+  ['isopen_6',['isOpen',['../classdl_1_1RenderWindow.html#a0e0c6f7ddd862e187ac393bfad05cf90',1,'dl::RenderWindow']]],
+  ['it_7',['What is it?',['../md_README.html#autotoc_md1',1,'']]]
 ];
