@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cyan_201',['Cyan',['../classdl_1_1Color.html#abf40a979133cdeae53a79169b88c94cc',1,'dl::Color']]]
+  ['cyan_0',['Cyan',['../classdl_1_1Color.html#abf40a979133cdeae53a79169b88c94cc',1,'dl::Color']]]
 ];

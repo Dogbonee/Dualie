@@ -1,9 +1,24 @@
 var searchData=
 [
-  ['initprintscreen_49',['InitPrintScreen',['../classdl_1_1RenderWindow.html#a6ae5b0e7b4c93da46f0c03bbf767c52e',1,'dl::RenderWindow']]],
-  ['intersects_50',['intersects',['../classdl_1_1Rect.html#a315e5af847cdb7f0dcc01ddfb28a946b',1,'dl::Rect']]],
-  ['iskeyheld_51',['isKeyHeld',['../namespacedl_1_1Input.html#a7aa2a9b9ace2d84d8f6a1026a05c1430',1,'dl::Input']]],
-  ['iskeypressed_52',['isKeyPressed',['../namespacedl_1_1Input.html#a0e2bee1148351600b8d90c64800148d3',1,'dl::Input']]],
-  ['iskeyreleased_53',['isKeyReleased',['../namespacedl_1_1Input.html#a2b19782a6c5353e872e0ee81d5d0fee9',1,'dl::Input']]],
-  ['isopen_54',['isOpen',['../classdl_1_1RenderWindow.html#a0e0c6f7ddd862e187ac393bfad05cf90',1,'dl::RenderWindow']]]
+  ['getcolor_0',['getColor',['../classdl_1_1Line.html#a494bb68f539af49a5883ddf8c520e762',1,'dl::Line']]],
+  ['getcolorvalue_1',['getColorValue',['../classdl_1_1Color.html#a28ba5d12062a7933f36a39131a7cfd09',1,'dl::Color']]],
+  ['getcurrentviewoffset_2',['getCurrentViewOffset',['../classdl_1_1RenderWindow.html#a93a3d0633b2fc80007700787ad3380f9',1,'dl::RenderWindow']]],
+  ['getdepth_3',['getDepth',['../classdl_1_1Drawable.html#ab9d88acdeddb4533a930e4b9b1946f7d',1,'dl::Drawable']]],
+  ['getelapsedtime_4',['getElapsedTime',['../classdl_1_1Clock.html#aa33be575920206ce84dcd4fae2522cde',1,'dl::Clock']]],
+  ['getendingposition_5',['getEndingPosition',['../classdl_1_1Line.html#ab95d6afce8b27c782c052b34ea3bf12f',1,'dl::Line']]],
+  ['getfillcolor_6',['getFillColor',['../classdl_1_1Shape.html#aef6c9b08876f7037ba68583897489676',1,'dl::Shape']]],
+  ['getglobalbounds_7',['getGlobalBounds',['../classdl_1_1Shape.html#ab55b649d5814434831e468df907720f8',1,'dl::Shape']]],
+  ['getlocalbounds_8',['getLocalBounds',['../classdl_1_1Shape.html#a74eaea2312ccf62a1e6bd9692acd4b8f',1,'dl::Shape']]],
+  ['getoffset_9',['getOffset',['../classdl_1_1View.html#a02fb385a46011f8baaf5968626c3bead',1,'dl::View']]],
+  ['getorigin_10',['getOrigin',['../classdl_1_1Shape.html#aec6cc31f7c13502719e569ba25e15e3d',1,'dl::Shape::getOrigin()'],['../classdl_1_1Sprite.html#af7b432e1a0ac3dfb8e7af1a6e58b9ddc',1,'dl::Sprite::getOrigin()'],['../classdl_1_1Text.html#af20f47847f2390fa894e2c0347159edf',1,'dl::Text::getOrigin()']]],
+  ['getoutlinecolor_11',['getOutlineColor',['../classdl_1_1Shape.html#aa9a797c4e177dc97291469e48d24f66f',1,'dl::Shape']]],
+  ['getoutlinethickness_12',['getOutlineThickness',['../classdl_1_1Shape.html#a15ad0c064b2da78c6473fac05a306b47',1,'dl::Shape']]],
+  ['getposition_13',['getPosition',['../classdl_1_1Transformable.html#a11000a77c4bd7b18483b29b5127b2956',1,'dl::Transformable']]],
+  ['getrotation_14',['getRotation',['../classdl_1_1Sprite.html#a5b08a9f82148c64b00ca3d827d39a3fe',1,'dl::Sprite']]],
+  ['getscale_15',['getScale',['../classdl_1_1Text.html#ae089de4e5e938e0e2e4f5941278b0d93',1,'dl::Text']]],
+  ['getsize_16',['getSize',['../classdl_1_1Shape.html#aa7713b1d4ef6d23ae49137f37339f9b9',1,'dl::Shape']]],
+  ['getstartingposition_17',['getStartingPosition',['../classdl_1_1Line.html#ae98639e74e9936296c1543e6bf880e83',1,'dl::Line']]],
+  ['getstring_18',['getString',['../classdl_1_1Text.html#ab88fa9e662132a6773b3cfc62992be8f',1,'dl::Text']]],
+  ['getthickness_19',['getThickness',['../classdl_1_1Line.html#a977448cfe1ae4cce4bec7899d008b598',1,'dl::Line']]],
+  ['green_20',['Green',['../classdl_1_1Color.html#ae35c8350dbe3c1142a78544183522731',1,'dl::Color']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['key_55',['Key',['../namespacedl_1_1Input.html#a9d849945cc263a13889898718ae5b3a4',1,'dl::Input']]]
+  ['how_20to_20build_0',['How to build',['../md_README.html#autotoc_md4',1,'']]],
+  ['how_20to_20use_1',['How to use',['../md_README.html#autotoc_md5',1,'']]]
 ];

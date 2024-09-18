@@ -42,6 +42,8 @@ add_library(dualie STATIC
         src/Dualie/System/Time.cpp
         include/Dualie/System/Time.hpp
         include/Dualie/System.hpp
+        src/Dualie/Graphics/Line.cpp
+        include/Dualie/Graphics/Line.hpp
 )
 
 find_package(PkgConfig REQUIRED)
