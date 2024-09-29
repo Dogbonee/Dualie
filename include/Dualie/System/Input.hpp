@@ -57,6 +57,7 @@ namespace dl::Input {
      extern u32 KeyHeldMask;
      extern u32 KeyReleasedMask;
      extern float SliderValue;
+     extern dl::Vector2f CirclePadPosition;
 
 
      /**
