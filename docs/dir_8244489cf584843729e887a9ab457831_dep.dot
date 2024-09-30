@@ -1,0 +1,16 @@
+digraph "build/CMakeFiles/dualie.dir/src"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_7e94dac0aefbd6be7acef575e08da8f6 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="dualie.dir", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_7e94dac0aefbd6be7acef575e08da8f6.html",tooltip=""]
+  subgraph clusterdir_8244489cf584843729e887a9ab457831 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_8244489cf584843729e887a9ab457831.html",tooltip=""]
+    dir_8244489cf584843729e887a9ab457831 [shape=plaintext, label="src"];
+  dir_3154907d23e63847ab398d035674d918 [label="Dualie", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_3154907d23e63847ab398d035674d918.html",tooltip=""];
+  }
+  }
+}

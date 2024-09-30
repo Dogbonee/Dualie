@@ -56,7 +56,15 @@ namespace dl::Input {
      extern u32 KeyPressedMask;
      extern u32 KeyHeldMask;
      extern u32 KeyReleasedMask;
+
+     /**
+      * @brief The value of the 3D slider. This value will always be between [0,1].
+      */
      extern float SliderValue;
+     /**
+      * @brief The position of the circle pad. This can be used along the regular input, which treats
+      * the circle pad as a D-pad.
+      */
      extern dl::Vector2f CirclePadPosition;
 
 

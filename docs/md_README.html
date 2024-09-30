@@ -92,15 +92,12 @@ $(function(){ initResizable(false); });
 What is it?</h2>
 <p>Dualie is a 3DS homebrew library heavily based on SFML that utilizes citro2d. It aims to provide an abstraction of citro2d.</p>
 <h2><a class="anchor" id="autotoc_md2"></a>
-Limitations</h2>
-<p>Dualie is very early in development and currently only supports bare bones graphics programming. Contributions are welcome in any area.</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
 Documentation</h2>
-<p>You can find the documentation for dualie <a href="http://dogbonee.github.io/Dualie">here</a>. Not many examples of the library currently exist, however you can see a port of tetris that made using the library <a href="https://github.com/Dogbonee/3DS_Tetritime">here</a>.</p>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<p>You can find the documentation for dualie <a href="http://dogbonee.github.io/Dualie">here</a>. Not many examples of the library currently exist, however you can see a port of tetris that made using the library <a href="https://github.com/Dogbonee/3DS_Tetritime">here</a>, as well as an implementation of John Conway's Game of Life <a href="https://github.com/Dogbonee/GameOfLife_3DS">here</a>.</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
 How to build</h2>
 <p>DevkitPro is required to build this library. Dualie also depends on libopusfile and pkg-config, which can be installed through devkitPro's pacman package manager like so: <code>pacman -S 3ds-opusfile 3ds-pkg-config</code> To build, set -DCMAKE_TOOLCHAIN_FILE to wherever 3DS.cmake lies in your filesystem, then build the project normally using CMake. You can install the library by using <code>make install</code> or <code>ninja install</code>. Note that the <code>DEVKITPRO</code> environment variable needs to be correctly set.</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md4"></a>
 How to use</h2>
 <p>Similar to building, libopusfile and pkg-config must be installed, and <code>CMAKE_TOOLCHAIN_FILE</code> must be set to the 3ds.cmake file. <code>Dualie_DIR</code> then needs to be set to the cmake directory located in the dualie root directory. If the config file cannot be found, set <code>CMAKE_PREFIX_PATH</code> to the Dualie_DIR variable like so: <code>set(CMAKE_PREFIX_PATH ${Dualie_DIR}</code> Then one can link to the library normally: <code>target_link_libraries(${PROJECT_NAME} ${DUALIE_LIBRARY})</code> <br  />
 </p>
@@ -124,7 +121,7 @@ How to use</h2>
 <div class="line">ctr_create_3dsx(${PROJECT_NAME}</div>
 <div class="line">        SMDH ${PROJECT_NAME}.smdh</div>
 <div class="line">)</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
 Example</h1>
 <p>Similarly to SFML, graphics revolve around a RenderWindow object, and draw targets can be selected in the clear function. Below is a simple program that draws a rectangle to the top screen and a circle to the bottom screen.</p>
 <div class="fragment"><div class="line">#include &lt;Dualie/Dualie.hpp&gt;</div>

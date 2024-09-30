@@ -22,8 +22,9 @@ var searchData=
   ['setthickness_19',['setThickness',['../classdl_1_1Line.html#a67f4b784b10e8a7fa8061957fbddbba0',1,'dl::Line']]],
   ['setview_20',['setView',['../classdl_1_1RenderWindow.html#a8511252de6e1598d2a5b2edd9019c64d',1,'dl::RenderWindow']]],
   ['shape_21',['Shape',['../classdl_1_1Shape.html',1,'dl']]],
-  ['sprite_22',['Sprite',['../classdl_1_1Sprite.html',1,'dl']]],
-  ['spritesheet_23',['SpriteSheet',['../classdl_1_1SpriteSheet.html',1,'dl']]],
-  ['start_24',['START',['../namespacedl_1_1Input.html#a9d849945cc263a13889898718ae5b3a4af7227dce149031802fbe25805986e406',1,'dl::Input']]],
-  ['stop_25',['stop',['../classdl_1_1Music.html#a3bf12a8a51b7afe029040c617c680a38',1,'dl::Music']]]
+  ['slidervalue_22',['SliderValue',['../namespacedl_1_1Input.html#a0582ee812138c52451ff8be127ce625c',1,'dl::Input']]],
+  ['sprite_23',['Sprite',['../classdl_1_1Sprite.html',1,'dl']]],
+  ['spritesheet_24',['SpriteSheet',['../classdl_1_1SpriteSheet.html',1,'dl']]],
+  ['start_25',['START',['../namespacedl_1_1Input.html#a9d849945cc263a13889898718ae5b3a4af7227dce149031802fbe25805986e406',1,'dl::Input']]],
+  ['stop_26',['stop',['../classdl_1_1Music.html#a3bf12a8a51b7afe029040c617c680a38',1,'dl::Music']]]
 ];
