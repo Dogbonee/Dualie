@@ -44,6 +44,8 @@ add_library(dualie STATIC
         include/Dualie/System.hpp
         src/Dualie/Graphics/Line.cpp
         include/Dualie/Graphics/Line.hpp
+        include/Dualie/Audio/Beep.cpp
+        include/Dualie/Audio/Beep.hpp
 )
 
 find_package(PkgConfig REQUIRED)
