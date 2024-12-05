@@ -9,7 +9,6 @@ dl::Music::Music()
 {
     LightEvent_Init(&m_event, RESET_ONESHOT);
     allocateBuffers();
-
 }
 
 dl::Music::~Music()
