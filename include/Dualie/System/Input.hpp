@@ -65,18 +65,18 @@ namespace dl::Input {
       * @brief The position of the circle pad. This can be used along the regular input, which treats
       * the circle pad as a D-pad.
       */
-     extern dl::Vector2f CirclePadPosition;
+     extern dl::Vector2i CirclePadPosition;
 
 
      /**
       * @brief The touch position of the screen. If the screen is not touched, This will be (0,0). See LastTouchPosition
       */
-     extern dl::Vector2f TouchPosition;
+     extern dl::Vector2u TouchPosition;
 
     /**
      * @brief The touch position of the screen. If the screen is not touched, This will be the last valid touch of the screen. See TouchPosition
      */
-     extern dl::Vector2f LastTouchPosition;
+     extern dl::Vector2u LastTouchPosition;
 
      /**
       * @brief Returns whether a certain key was pressed that frame. Note that this does not capture held buttons
