@@ -10,7 +10,7 @@ of John Conway's Game of Life [here](https://github.com/Dogbonee/GameOfLife_3DS)
 
 ### How to build
 DevkitPro is required to build this library. Dualie also depends on libopusfile and pkg-config, which can be installed through devkitPro's pacman package manager like so: 
-`pacman -S 3ds-opusfile 3ds-pkg-config` To build, set -DCMAKE_TOOLCHAIN_FILE to wherever 3DS.cmake lies in your filesystem,
+`sudo dkp-pacman -S 3ds-opusfile 3ds-pkg-config` To build, set `-DCMAKE_TOOLCHAIN_FILE` to wherever 3DS.cmake lies in your filesystem,
 then build the project normally using CMake. You can install the library by using `make install` or `ninja install`. Note that
 the `DEVKITPRO` environment variable needs to be correctly set.
 
