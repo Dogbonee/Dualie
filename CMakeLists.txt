@@ -1,7 +1,5 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.5)
 project(dualie)
-
-
 
 add_library(dualie STATIC
         include/Dualie/Graphics.hpp

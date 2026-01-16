@@ -35,7 +35,7 @@ namespace dl {
          * rendered to, it will render garbage.
          * @param screen    Screen to initizalize printing for
          */
-        void InitPrintScreen(SCREEN screen);
+        static void InitPrintScreen(SCREEN screen);
 
         /**
          * @brief Prints text to the screen. A screen must be initialized using RenderWindow::InitPrintScreen for this

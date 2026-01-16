@@ -60,10 +60,9 @@ namespace dl{
 
         };
 
-
-
     using Vector2f = dl::Vector2<float>;
     using Vector2i = dl::Vector2<int>;
+    using Vector2u = dl::Vector2<unsigned int>;
 }
 
 
