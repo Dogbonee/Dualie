@@ -3,6 +3,10 @@
 ### What is it?
 Dualie is a 3DS homebrew library heavily based on SFML that utilizes citro2d. It aims to provide an abstraction of citro2d.
 
+### Supporting
+It's just me on this project, and I'm a busy college student so any help in the form of bug reports or pull requests is greatly appreciated. If you'd like to see a feature,
+improvement, or bug fix implemented, create an issue or pull request and I'll do my best to address it in a timely manner. 
+
 ### Documentation
 You can find the documentation for dualie [here](http://dogbonee.github.io/Dualie). Not many examples of the library currently exist,
 however you can see a port of tetris that made using the library [here](https://github.com/Dogbonee/3DS_Tetritime), as well as an implementation
