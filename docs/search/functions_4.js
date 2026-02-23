@@ -15,7 +15,7 @@ var searchData=
   ['getoutlinethickness_12',['getOutlineThickness',['../classdl_1_1Shape.html#a15ad0c064b2da78c6473fac05a306b47',1,'dl::Shape']]],
   ['getposition_13',['getPosition',['../classdl_1_1Transformable.html#a11000a77c4bd7b18483b29b5127b2956',1,'dl::Transformable']]],
   ['getrotation_14',['getRotation',['../classdl_1_1Sprite.html#a5b08a9f82148c64b00ca3d827d39a3fe',1,'dl::Sprite']]],
-  ['getscale_15',['getScale',['../classdl_1_1Text.html#ae089de4e5e938e0e2e4f5941278b0d93',1,'dl::Text']]],
+  ['getscale_15',['getScale',['../classdl_1_1Sprite.html#adc7932fb5c7d55d9ce50c979f15b818b',1,'dl::Sprite::getScale()'],['../classdl_1_1Text.html#ae089de4e5e938e0e2e4f5941278b0d93',1,'dl::Text::getScale()']]],
   ['getsize_16',['getSize',['../classdl_1_1Shape.html#aa7713b1d4ef6d23ae49137f37339f9b9',1,'dl::Shape']]],
   ['getstartingposition_17',['getStartingPosition',['../classdl_1_1Line.html#ae98639e74e9936296c1543e6bf880e83',1,'dl::Line']]],
   ['getstring_18',['getString',['../classdl_1_1Text.html#ab88fa9e662132a6773b3cfc62992be8f',1,'dl::Text']]],

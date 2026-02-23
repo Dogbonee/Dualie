@@ -14,7 +14,7 @@ var searchData=
   ['setposition_11',['setPosition',['../classdl_1_1Sprite.html#a9a65124785235e856b0dd484347ad43e',1,'dl::Sprite::setPosition()'],['../classdl_1_1Transformable.html#aaa45eb4620d73cc7355c7b8b28f76aea',1,'dl::Transformable::setPosition(const dl::Vector2f &amp;position)'],['../classdl_1_1Transformable.html#a7f75ad688263e79829d7880a8953c3c0',1,'dl::Transformable::setPosition(float x, float y)']]],
   ['setradius_12',['setRadius',['../classdl_1_1CircleShape.html#aedb5c2d316aafb563c4645943531749f',1,'dl::CircleShape']]],
   ['setrotation_13',['setRotation',['../classdl_1_1Sprite.html#a9772753c8d28f9fce2032e2db1f4126f',1,'dl::Sprite']]],
-  ['setscale_14',['setScale',['../classdl_1_1Text.html#a52ca16445fb21991377fcf22b477202f',1,'dl::Text']]],
+  ['setscale_14',['setScale',['../classdl_1_1Sprite.html#a64393d5006c82a881fb0f80b407bb757',1,'dl::Sprite::setScale()'],['../classdl_1_1Text.html#a52ca16445fb21991377fcf22b477202f',1,'dl::Text::setScale()']]],
   ['setsize_15',['setSize',['../classdl_1_1RectangleShape.html#a0e67d65bd3fa81a8a2c0a04157e8c24d',1,'dl::RectangleShape']]],
   ['setstartingposition_16',['setStartingPosition',['../classdl_1_1Line.html#a3b2d51a95eeee56b4114b79fe57574bf',1,'dl::Line']]],
   ['setstring_17',['setString',['../classdl_1_1Text.html#a1392d6d598d10eaaf4984ad69438f222',1,'dl::Text']]],

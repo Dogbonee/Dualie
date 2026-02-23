@@ -18,10 +18,10 @@ namespace dl
      */
     class Sprite : public dl::Transformable, public dl::Drawable
     {
-
         C2D_Sprite m_sprite{};
         float m_rotation{};
         dl::Vector2f m_origin;
+        dl::Vector2f m_scale;
 
     public:
 
@@ -32,7 +32,7 @@ namespace dl
          * @param spriteSheet   The spritesheet to target
          * @param index     The image index of the spritesheet
          */
-        void loadFromSpriteSheet(SpriteSheet spriteSheet, size_t index);
+        void loadFromSpriteSheet(SpriteSheet& spriteSheet, size_t index);
 
         /**
          * @brief Sets the position of the sprite
@@ -47,37 +47,44 @@ namespace dl
         void move(const dl::Vector2f &offset) override;
 
         /**
-         * @brief Sets the rotation of the sprite in radians
-         * @param rotation  The rotation to set (in radians)
-         */
-
-        /**
-         * @brief Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds.
-         * Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size
-         * will cause the shape to be centered on its position.
+         * @brief Sets the origin of the sprite. The default origin is (0,0) and is the top left pixel of the sprite bounds.
+         * Setting the origin can affect where the sprite is drawn. For instance, setting the origin to be half the sprite size
+         * will cause the sprite to be centered on its position.
          * @param origin    The origin in pixels
          */
         void setOrigin(const dl::Vector2f& origin);
 
         /**
-         * @brief Sets the origin of the shape. The default origin is (0,0) and is the top left pixel of the shape bounds.
-         * Setting the origin can affect where the shape is drawn. For instance, setting the origin to be half the shape size
-         * will cause the shape to be centered on its position.
+         * @brief Sets the origin of the sprite. The default origin is (0,0) and is the top left pixel of the sprite bounds.
+         * Setting the origin can affect where the sprite is drawn. For instance, setting the origin to be half the sprite size
+         * will cause the sprite to be centered on its position.
          * @param x    The origin in pixels (X)
          * @param y    The origin in pixels (Y)
          */
         void setOrigin(float x, float y);
 
         /**
-         * @brief Sets the rotation of the sprite
-         * @param rotation  The rotation in radians
-         */
-        void setRotation(const float &rotation);
-
-        /**
          * @return The origin in pixels
          */
         const dl::Vector2f& getOrigin();
+
+        /**
+         * @brief Sets the scale of the sprite. A negative value will cause the sprite to be flipped on its respective axis.
+         * @param scale The scaling vector
+         */
+        void setScale(const dl::Vector2f &scale);
+
+        /**
+         * @return The scale of the sprite
+         */
+        const dl::Vector2f& getScale();
+
+        /**
+         * @brief Sets the rotation of the sprite
+         * @param rotation  The rotation in radians
+         */
+
+        void setRotation(const float &rotation);
 
         /**
          * @return The sprite's rotation in radians
@@ -93,8 +100,6 @@ namespace dl
         void draw(const dl::Vector2f &viewOffset) override;
 
         friend C2D_SpriteSheet SpriteSheet::getSpriteSheet();
-
-
     };
 
 }

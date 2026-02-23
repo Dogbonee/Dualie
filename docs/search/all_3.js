@@ -10,5 +10,6 @@ var searchData=
   ['drawable_7',['Drawable',['../classdl_1_1Drawable.html',1,'dl']]],
   ['dright_8',['DRIGHT',['../namespacedl_1_1Input.html#a9d849945cc263a13889898718ae5b3a4ac386bcb541766b798dadd4810ad78dd8',1,'dl::Input']]],
   ['dualie_9',['Dualie',['../md_README.html',1,'']]],
-  ['dup_10',['DUP',['../namespacedl_1_1Input.html#a9d849945cc263a13889898718ae5b3a4adc8026006e6f8945bcfc4b8cd3e7e2d6',1,'dl::Input']]]
+  ['dualie_20on_20clion_10',['Setting Up Dualie on CLion',['../md_SETUP.html',1,'']]],
+  ['dup_11',['DUP',['../namespacedl_1_1Input.html#a9d849945cc263a13889898718ae5b3a4adc8026006e6f8945bcfc4b8cd3e7e2d6',1,'dl::Input']]]
 ];
