@@ -2,3 +2,10 @@
 /build
 /lib
 /.idea
+
+# Ignore Doxygen output
+/docs
+doc/html/
+doc/latex/
+doc/man/
+doxygen_sqlite3.db
