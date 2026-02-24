@@ -1,0 +1,7 @@
+<map id="dl::Text" name="dl::Text">
+<area shape="rect" id="Node000001" title="A class used to handle the transformation and drawing of visible text." alt="" coords="110,79,179,104"/>
+<area shape="rect" id="Node000002" href="$classdl_1_1Transformable.html" title="A base class for anything that has a position on the screen." alt="" coords="5,5,140,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,39,135,77,131,80,93,43"/>
+<area shape="rect" id="Node000003" href="$classdl_1_1Drawable.html" title="The base class for any object that can be drawn to the screen." alt="" coords="165,5,269,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,43,158,80,154,77,193,39"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="dl::Shape" name="dl::Shape">
+<area shape="rect" id="Node000001" title="The base class for any shape." alt="" coords="279,303,362,328"/>
+<area shape="rect" id="Node000002" href="$classdl_1_1Transformable.html" title="A base class for anything that has a position on the screen." alt="" coords="145,147,280,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,182,315,301,310,304,227,185"/>
+<area shape="rect" id="Node000003" href="$classdl_1_1Vector2.html" title=" " alt="" coords="5,5,156,31"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="73,44,62,82,54,130,55,179,62,202,74,224,93,246,117,265,144,279,172,290,229,304,279,310,279,316,228,310,170,295,141,284,114,269,90,250,69,227,57,204,50,180,48,129,56,81,68,43"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,39,204,145,200,148,99,42"/>
+<area shape="rect" id="Node000004" href="$classdl_1_1Drawable.html" title="The base class for any object that can be drawn to the screen." alt="" coords="305,147,409,172"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="353,186,326,303,321,302,348,185"/>
+<area shape="rect" id="Node000005" href="$classdl_1_1Color.html" title="A class used to describe a RGBA color." alt="" coords="433,147,509,172"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="457,185,423,227,377,271,337,304,334,300,373,267,419,224,453,182"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="501,140,525,142,533,149,536,159,531,172,519,179,504,180,488,175,489,170,505,174,518,174,527,169,531,159,528,151,523,147,501,145"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="dl::Sprite" name="dl::Sprite">
+<area shape="rect" id="Node000001" title="A class used to handle the drawing and transformation of sprites." alt="" coords="113,168,193,193"/>
+<area shape="rect" id="Node000002" href="$classdl_1_1Transformable.html" title="A base class for anything that has a position on the screen." alt="" coords="13,93,148,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,127,143,166,139,170,100,131"/>
+<area shape="rect" id="Node000003" href="$classdl_1_1Vector2.html" title=" " alt="" coords="5,5,156,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,45,83,93,78,93,78,45"/>
+<area shape="rect" id="Node000004" href="$classdl_1_1Drawable.html" title="The base class for any object that can be drawn to the screen." alt="" coords="173,93,277,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="205,131,166,170,162,166,201,127"/>
+</map>

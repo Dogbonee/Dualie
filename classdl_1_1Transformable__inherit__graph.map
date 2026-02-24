@@ -1,0 +1,13 @@
+<map id="dl::Transformable" name="dl::Transformable">
+<area shape="rect" id="Node000001" title="A base class for anything that has a position on the screen." alt="" coords="181,5,316,31"/>
+<area shape="rect" id="Node000002" href="$classdl_1_1Shape.html" title="The base class for any shape." alt="" coords="102,79,185,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,41,162,81,159,76,219,36"/>
+<area shape="rect" id="Node000005" href="$classdl_1_1Sprite.html" title="A class used to handle the drawing and transformation of sprites." alt="" coords="209,79,289,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="251,44,251,79,246,79,246,44"/>
+<area shape="rect" id="Node000006" href="$classdl_1_1Text.html" title="A class used to handle the transformation and drawing of visible text." alt="" coords="313,79,382,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="277,36,333,76,330,81,274,41"/>
+<area shape="rect" id="Node000003" href="$classdl_1_1CircleShape.html" title="A circle shape." alt="" coords="5,152,124,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="122,115,79,154,76,150,119,111"/>
+<area shape="rect" id="Node000004" href="$classdl_1_1RectangleShape.html" title="A rectangle shape." alt="" coords="149,152,295,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="168,111,211,150,207,154,164,115"/>
+</map>
