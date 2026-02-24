@@ -26,6 +26,7 @@ namespace dl
     public:
 
         Sprite();
+        ~Sprite() = default;
 
         /**
          * @brief Loads an image into the sprite from a spritesheet
