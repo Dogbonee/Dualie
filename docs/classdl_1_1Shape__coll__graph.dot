@@ -7,12 +7,26 @@ digraph "dl::Shape"
   Node1 [id="Node000001",label="dl::Shape",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="The base class for any shape."];
   Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="dl::Transformable",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classdl_1_1Transformable.html",tooltip="A base class for anything that has a position on the screen."];
-  Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_position",fontcolor="grey" ];
+  Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">m_position</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
   Node3 [id="Node000003",label="dl::Vector2\< float \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classdl_1_1Vector2.html",tooltip=" "];
   Node4 -> Node1 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="dl::Drawable",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classdl_1_1Drawable.html",tooltip="The base class for any object that can be drawn to the screen."];
-  Node5 -> Node1 [id="edge4_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_fillColor\nm_outlineColor",fontcolor="grey" ];
+  Node5 -> Node1 [id="edge4_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">m_fillColor</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">m_outlineColor</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
   Node5 [id="Node000005",label="dl::Color",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classdl_1_1Color.html",tooltip="A class used to describe a RGBA color."];
-  Node5 -> Node5 [id="edge5_Node000005_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" Black\nBlue\nCyan\nGreen\nMagenta\nRed\nTransparent\nWhite\nYellow",fontcolor="grey" ];
-  Node3 -> Node1 [id="edge6_Node000001_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_origin\nm_size",fontcolor="grey" ];
+  Node5 -> Node5 [id="edge5_Node000005_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Black</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Blue</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Cyan</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Green</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Magenta</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Red</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Transparent</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">White</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Yellow</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node3 -> Node1 [id="edge6_Node000001_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">m_origin</TD></TR>
+<TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">m_size</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
 }

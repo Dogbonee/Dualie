@@ -19,6 +19,13 @@ namespace dl {
         BOTTOM_SCREEN = 2
     };
 
+    enum HOOK_TYPE {
+        SUSPEND = 0,
+        RESTORE,
+        SLEEP,
+        WAKEUP,
+        EXIT,
+    };
 
 
     /**
@@ -29,6 +36,11 @@ namespace dl {
     public:
         RenderWindow();
         ~RenderWindow();
+
+        static constexpr int TOP_WIDTH = 400;
+        static constexpr int TOP_HEIGHT = 240;
+        static constexpr int BOTTOM_WIDTH = 320;
+        static constexpr int BOTTOM_HEIGHT = 240;
 
         /**
          * @brief Initializes a screen to use for printing. Note that if a screen is initialized for printing and then
@@ -92,7 +104,11 @@ namespace dl {
          */
         dl::Vector2f getCurrentViewOffset();
 
-
+        /**
+         * @brief Registers a callback that will be called when a 3DS system event occurs
+         * @param userHookCallback A function pointer to the desired callback
+         */
+        static void registerHookCallback(void (*userHookCallback)(HOOK_TYPE hookType));
 
     private:
         C3D_RenderTarget* m_screens[3];
@@ -100,8 +116,9 @@ namespace dl {
         dl::View m_view;
         bool m_3dActive;
         std::vector<dl::Drawable*> m_drawQueue;
-
-
+        aptHookCookie m_hookCookie;
+        static void (*userHookCallback)(HOOK_TYPE hookType);
+        static void hookCallback(APT_HookType type, void* param);
     };
 
 }
