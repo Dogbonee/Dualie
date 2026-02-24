@@ -31,3 +31,4 @@ jobs:
         with:
           folder: docs
           branch: gh-pages
+          dotfiles: true
