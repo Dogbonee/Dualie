@@ -4,6 +4,7 @@
 
 #include <Dualie/Graphics/RenderWindow.hpp>
 
+void (*dl::RenderWindow::userHookCallback)(HOOK_TYPE) = nullptr;
 
 dl::RenderWindow::RenderWindow() {
 
@@ -28,9 +29,11 @@ dl::RenderWindow::RenderWindow() {
     ndspChnSetRate(0, Music::SAMPLE_RATE);
     ndspChnSetFormat(0, NDSP_FORMAT_STEREO_PCM16);
 
+    aptHook(&m_hookCookie, hookCallback, NULL);
 }
 
 dl::RenderWindow::~RenderWindow() {
+    aptUnhook(&m_hookCookie);
     C2D_Fini();
     C3D_Fini();
     romfsExit();
@@ -38,7 +41,6 @@ dl::RenderWindow::~RenderWindow() {
     gfxExit();
     ndspExit();
 }
-
 
 void dl::RenderWindow::InitPrintScreen(dl::SCREEN screen) {
     consoleInit(screen < 2 ? GFX_TOP : GFX_BOTTOM, NULL);
@@ -105,6 +107,19 @@ void dl::RenderWindow::setView(const dl::View &view) {
 
 dl::Vector2f dl::RenderWindow::getCurrentViewOffset() {
     return m_view.getOffset();
+}
+
+void dl::RenderWindow::registerHookCallback(void(*callback)(HOOK_TYPE hookType))
+{
+    userHookCallback = callback;
+}
+
+void dl::RenderWindow::hookCallback(APT_HookType type, void *param)
+{
+    if (userHookCallback)
+    {
+        userHookCallback(static_cast<HOOK_TYPE>(type));
+    }
 }
 
 void dl::RenderWindow::set3dActive(bool active)
