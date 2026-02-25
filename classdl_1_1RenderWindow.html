@@ -76,6 +76,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classdl_1_1RenderWindow-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">dl::RenderWindow Class Reference</div></div>
 </div><!--header-->
@@ -119,6 +120,24 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ae5b0e7b4c93da46f0c03bbf767c52e" id="r_a6ae5b0e7b4c93da46f0c03bbf767c52e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1RenderWindow.html#a6ae5b0e7b4c93da46f0c03bbf767c52e">InitPrintScreen</a> (SCREEN screen)</td></tr>
 <tr class="memdesc:a6ae5b0e7b4c93da46f0c03bbf767c52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a screen to use for printing. Note that if a screen is initialized for printing and then rendered to, it will render garbage.  <br /></td></tr>
 <tr class="separator:a6ae5b0e7b4c93da46f0c03bbf767c52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdac0e4f3fdcdb454d0e34750d56695b" id="r_abdac0e4f3fdcdb454d0e34750d56695b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1RenderWindow.html#abdac0e4f3fdcdb454d0e34750d56695b">registerHookCallback</a> (void(*userHookCallback)(HOOK_TYPE hookType))</td></tr>
+<tr class="memdesc:abdac0e4f3fdcdb454d0e34750d56695b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a callback that will be called when a 3DS system event occurs.  <br /></td></tr>
+<tr class="separator:abdac0e4f3fdcdb454d0e34750d56695b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ab96c8fc6dfeedb8b8cd440f9590bf47d" id="r_ab96c8fc6dfeedb8b8cd440f9590bf47d"><td class="memItemLeft" align="right" valign="top"><a id="ab96c8fc6dfeedb8b8cd440f9590bf47d" name="ab96c8fc6dfeedb8b8cd440f9590bf47d"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>TOP_WIDTH</b> = 400</td></tr>
+<tr class="separator:ab96c8fc6dfeedb8b8cd440f9590bf47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4ea9586f57f9a0f04ecbdebeceac52" id="r_aaa4ea9586f57f9a0f04ecbdebeceac52"><td class="memItemLeft" align="right" valign="top"><a id="aaa4ea9586f57f9a0f04ecbdebeceac52" name="aaa4ea9586f57f9a0f04ecbdebeceac52"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>TOP_HEIGHT</b> = 240</td></tr>
+<tr class="separator:aaa4ea9586f57f9a0f04ecbdebeceac52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5b1c76bb03c1d579bdafba095b869a" id="r_aaf5b1c76bb03c1d579bdafba095b869a"><td class="memItemLeft" align="right" valign="top"><a id="aaf5b1c76bb03c1d579bdafba095b869a" name="aaf5b1c76bb03c1d579bdafba095b869a"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>BOTTOM_WIDTH</b> = 320</td></tr>
+<tr class="separator:aaf5b1c76bb03c1d579bdafba095b869a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad299ff56f72ecd4f7243be281076199d" id="r_ad299ff56f72ecd4f7243be281076199d"><td class="memItemLeft" align="right" valign="top"><a id="ad299ff56f72ecd4f7243be281076199d" name="ad299ff56f72ecd4f7243be281076199d"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>BOTTOM_HEIGHT</b> = 240</td></tr>
+<tr class="separator:ad299ff56f72ecd4f7243be281076199d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A interface for rendering. Includes both top and bottoms screens as targets. </p>
@@ -298,6 +317,40 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">str</td><td>The string to print </td></tr>
     <tr><td class="paramname">x</td><td>X position of text </td></tr>
     <tr><td class="paramname">y</td><td>Y position of text </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abdac0e4f3fdcdb454d0e34750d56695b" name="abdac0e4f3fdcdb454d0e34750d56695b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdac0e4f3fdcdb454d0e34750d56695b">&#9670;&#160;</a></span>registerHookCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dl::RenderWindow::registerHookCallback </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(HOOK_TYPE hookType)&#160;</td>
+          <td class="paramname"><em>userHookCallback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers a callback that will be called when a 3DS system event occurs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userHookCallback</td><td>A function pointer to the desired callback </td></tr>
   </table>
   </dd>
 </dl>
