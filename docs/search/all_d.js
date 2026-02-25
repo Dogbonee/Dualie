@@ -1,6 +1,0 @@
-var searchData=
-[
-  ['play_0',['play',['../classdl_1_1Music.html#ab35ca0f8e2c175900a0540536782c5a4',1,'dl::Music']]],
-  ['prerequisites_1',['Prerequisites',['../md_SETUP.html#autotoc_md7',1,'']]],
-  ['print_2',['print',['../classdl_1_1RenderWindow.html#abe7f53ce0e7db44d375486328cc06b46',1,'dl::RenderWindow']]]
-];
