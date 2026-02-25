@@ -18,11 +18,16 @@ namespace dl
         C2D_SpriteSheet m_spriteSheet;
 
     public:
+        SpriteSheet();
+        SpriteSheet(const SpriteSheet&) = delete;
+        SpriteSheet& operator=(const SpriteSheet&) = delete;
+        ~SpriteSheet();
         /**
          * @brief Loads a spritesheet from a t3x file
          * @param path  Path to load from
+         * @returns True if successfully loaded, false otherwise
          */
-        void loadFromFile(const std::string &path);
+        bool loadFromFile(const std::string &path);
         C2D_SpriteSheet getSpriteSheet();
 
     };

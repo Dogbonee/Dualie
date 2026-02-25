@@ -4,12 +4,10 @@
 
 #include <Dualie/Graphics/Sprite.hpp>
 
-dl::Sprite::Sprite()
+dl::Sprite::Sprite() : m_scale(1, 1)
 {
     C2D_SpriteSetCenter(&m_sprite, 0.f,0.f);
 }
-
-
 
 void dl::Sprite::setPosition(const dl::Vector2f &position)
 {
@@ -33,13 +31,10 @@ void dl::Sprite::rotate(const float &rotationOffset)
     C2D_SpriteRotate(&m_sprite, rotationOffset);
 }
 
-
-
 const float& dl::Sprite::getRotation()
 {
     return m_rotation;
 }
-
 
 void dl::Sprite::draw(const dl::Vector2f &viewOffset)
 {
@@ -48,7 +43,7 @@ void dl::Sprite::draw(const dl::Vector2f &viewOffset)
     C2D_DrawSprite(&m_sprite);
 }
 
-void dl::Sprite::loadFromSpriteSheet(SpriteSheet spriteSheet, size_t index)
+void dl::Sprite::loadFromSpriteSheet(SpriteSheet& spriteSheet, size_t index)
 {
     C2D_SpriteFromSheet(&m_sprite, spriteSheet.getSpriteSheet(), index);
 }
@@ -66,6 +61,17 @@ void dl::Sprite::setOrigin(float x, float y)
 const dl::Vector2f &dl::Sprite::getOrigin()
 {
     return m_origin;
+}
+
+void dl::Sprite::setScale(const dl::Vector2f &scale)
+{
+    C2D_SpriteSetScale(&m_sprite, scale.x, scale.y);
+    m_scale = scale;
+}
+
+const dl::Vector2f & dl::Sprite::getScale()
+{
+    return m_scale;
 }
 
 
