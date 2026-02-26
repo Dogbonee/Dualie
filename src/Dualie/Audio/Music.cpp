@@ -5,7 +5,7 @@
 #include <Dualie/Audio/Music.hpp>
 
 
-dl::Music::Music()
+dl::Music::Music() : m_opusFile(nullptr)
 {
     LightEvent_Init(&m_event, RESET_ONESHOT);
     allocateBuffers();
