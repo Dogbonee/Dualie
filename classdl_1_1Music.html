@@ -88,9 +88,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afa06f967812496c67c4b6a4c13d6ce8c" id="r_afa06f967812496c67c4b6a4c13d6ce8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Music.html#afa06f967812496c67c4b6a4c13d6ce8c">loadFromFile</a> (std::string path)</td></tr>
-<tr class="memdesc:afa06f967812496c67c4b6a4c13d6ce8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads a opus file from romfs  <br /></td></tr>
-<tr class="separator:afa06f967812496c67c4b6a4c13d6ce8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d6ab42aac088172db73a3be708cb81" id="r_a60d6ab42aac088172db73a3be708cb81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdl_1_1Music.html#a60d6ab42aac088172db73a3be708cb81">loadFromFile</a> (std::string path)</td></tr>
+<tr class="memdesc:a60d6ab42aac088172db73a3be708cb81"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads a opus file from romfs  <br /></td></tr>
+<tr class="separator:a60d6ab42aac088172db73a3be708cb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab35ca0f8e2c175900a0540536782c5a4" id="r_ab35ca0f8e2c175900a0540536782c5a4"><td class="memItemLeft" align="right" valign="top"><a id="ab35ca0f8e2c175900a0540536782c5a4" name="ab35ca0f8e2c175900a0540536782c5a4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>play</b> ()</td></tr>
 <tr class="memdesc:ab35ca0f8e2c175900a0540536782c5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the opus music file loaded. <br /></td></tr>
@@ -131,14 +131,14 @@ static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>WA
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class that handles the playback of opus audio files. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="afa06f967812496c67c4b6a4c13d6ce8c" name="afa06f967812496c67c4b6a4c13d6ce8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa06f967812496c67c4b6a4c13d6ce8c">&#9670;&#160;</a></span>loadFromFile()</h2>
+<a id="a60d6ab42aac088172db73a3be708cb81" name="a60d6ab42aac088172db73a3be708cb81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d6ab42aac088172db73a3be708cb81">&#9670;&#160;</a></span>loadFromFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dl::Music::loadFromFile </td>
+          <td class="memname">bool dl::Music::loadFromFile </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -154,6 +154,7 @@ static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>WA
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the load succeeded, false otherwise. </dd></dl>
 
 </div>
 </div>
