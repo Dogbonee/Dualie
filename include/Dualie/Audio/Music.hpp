@@ -23,8 +23,6 @@ namespace dl
      */
     class Music
     {
-
-
         ndspWaveBuf m_waveBufs[3];
         int16_t* m_audioBuffer = nullptr;
 
@@ -33,17 +31,15 @@ namespace dl
         LightEvent m_event;
         Thread m_threadId;
 
-        volatile bool m_quit = false;  // Quit flag
+        volatile bool m_quit = false;
         bool m_looping = false;
 
         bool fillBuffer(ndspWaveBuf* waveBuf_);
         void allocateBuffers();
         void reinitialize();
-        void audioCallback(void* const nul_);
         void audioThread();
         static void callbackWrapper(void* obj);
         static void threadWrapper(void* obj);
-        std::string getOpusErrorString(int error);
 
     public:
         Music();
@@ -52,8 +48,9 @@ namespace dl
         /**
          * @brief loads a opus file from romfs
          * @param path  The path of the file to open
+         * @returns True if the load succeeded, false otherwise.
          */
-        void loadFromFile(std::string path);
+        bool loadFromFile(std::string path);
 
         /**
          * @brief Plays the opus music file loaded
@@ -79,7 +76,7 @@ namespace dl
         static constexpr int SAMPLE_RATE = 48000; // Opus is fixed at 48kHz
         static constexpr int SAMPLES_PER_BUF = SAMPLE_RATE * 120 / 1000;  // 120ms buffer
         static constexpr int CHANNELS_PER_SAMPLE = 2;
-        static constexpr int THREAD_AFFINITY = -1;           // Execute thread on any core
+        static constexpr int THREAD_AFFINITY = -1;           // No thread affinity
         static constexpr int THREAD_STACK_SZ = 32 * 1024;    // 32kB stack for audio thread
         static constexpr size_t WAVEBUF_SIZE = SAMPLES_PER_BUF * CHANNELS_PER_SAMPLE * sizeof(int16_t);
     };

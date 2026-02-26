@@ -20,15 +20,15 @@ dl::Music::~Music()
 }
 
 
-void dl::Music::loadFromFile(std::string path)
+bool dl::Music::loadFromFile(std::string path)
 {
     int error;
     m_opusFile = op_open_file(path.c_str(), &error);
     if (error)
     {
-        printf("Failed to open file: error %d (%s)\n", error,
-               getOpusErrorString(error).c_str());
+        return false;
     }
+    return true;
 }
 
 void dl::Music::play()
@@ -42,8 +42,8 @@ void dl::Music::play()
     // Set the thread priority to the main thread's priority ...
     int32_t priority = 0x30;
     svcGetThreadPriority(&priority, CUR_THREAD_HANDLE);
-    // ... then subtract 1, as lower number => higher actual priority ...
-    priority -= 1;
+    // ... then add one to make it a lower priority
+    priority += 1;
     // ... finally, clamp it between 0x18 and 0x3F to guarantee that it's valid.
     priority = priority < 0x18 ? 0x18 : priority;
     priority = priority > 0x3F ? 0x3F : priority;
@@ -78,25 +78,10 @@ void dl::Music::stop()
     threadFree(m_threadId);
 }
 
-void dl::Music::audioCallback(void* const nul_)
-{
-    (void) nul_;  // Unused
-
-    if (m_quit)
-    { // Quit flag
-        return;
-    }
-
-    LightEvent_Signal(&m_event);
-
-}
-
 void dl::Music::audioThread()
 {
     while (!m_quit)
-    {  // Whilst the quit flag is unset,
-        // search our waveBufs and fill any that aren't currently
-        // queued for playback (i.e, those that are 'done')
+    {
         for (size_t i = 0; i < ARRAY_SIZE(m_waveBufs); ++i)
         {
             if (m_waveBufs[i].status != NDSP_WBUF_DONE)
@@ -105,7 +90,7 @@ void dl::Music::audioThread()
             }
 
             if (!fillBuffer(&m_waveBufs[i]))
-            {   // Playback complete
+            {
                 if (m_looping)
                 {
                     reinitialize();
@@ -114,10 +99,6 @@ void dl::Music::audioThread()
                 return;
             }
         }
-
-        // Wait for a signal that we're needed again before continuing,
-        // so that we can yield to other things that want to run
-        // (Note that the 3DS uses cooperative threading)
         LightEvent_Wait(&m_event);
     }
 }
@@ -133,23 +114,18 @@ bool dl::Music::fillBuffer(ndspWaveBuf* waveBuf_)
         const size_t bufferSize = (SAMPLES_PER_BUF - totalSamples) *
                                   CHANNELS_PER_SAMPLE;
 
-        // Decode bufferSize samples from opusFile_ into buffer,
-        // storing the number of samples that were decoded (or error)
         const int samples = op_read_stereo(m_opusFile, buffer, bufferSize);
         if (samples <= 0)
         {
             if (samples == 0)
-            { break; }  // No error here
+            { break; }
 
-            printf("op_read_stereo: error %d (%s)", samples,
-                   getOpusErrorString(samples).c_str());
-            break;
+            return false;
         }
 
         totalSamples += samples;
     }
 
-    // If no samples were read in the last decode cycle, we're done
     if (totalSamples == 0)
     {
         return false;
@@ -192,14 +168,21 @@ void dl::Music::reinitialize()
 {
     op_raw_seek(m_opusFile, 0);
     ndspChnWaveBufClear(0);
-    linearFree(m_audioBuffer);
-    allocateBuffers();
+
+    for (size_t i = 0; i < ARRAY_SIZE(m_waveBufs); ++i)
+    {
+        m_waveBufs[i].status = NDSP_WBUF_DONE;
+    }
 }
 
 void dl::Music::callbackWrapper(void* obj)
 {
     dl::Music* music = static_cast<dl::Music*>(obj);
-    music->audioCallback(nullptr);
+
+    if (!music->m_quit)
+    {
+        LightEvent_Signal(&music->m_event);
+    }
 }
 
 void dl::Music::threadWrapper(void* obj)
@@ -207,52 +190,6 @@ void dl::Music::threadWrapper(void* obj)
     dl::Music* music = static_cast<dl::Music*>(obj);
     music->audioThread();
 }
-
-std::string dl::Music::getOpusErrorString(int error)
-{
-    switch (error)
-    {
-        case OP_FALSE:
-            return "OP_FALSE: A request did not succeed.";
-        case OP_HOLE:
-            return "OP_HOLE: There was a hole in the page sequence numbers.";
-        case OP_EREAD:
-            return "OP_EREAD: An underlying read, seek or tell operation "
-                   "failed.";
-        case OP_EFAULT:
-            return "OP_EFAULT: A NULL pointer was passed where none was "
-                   "expected, or an internal library error was encountered.";
-        case OP_EIMPL:
-            return "OP_EIMPL: The stream used a feature which is not "
-                   "implemented.";
-        case OP_EINVAL:
-            return "OP_EINVAL: One or more parameters to a function were "
-                   "invalid.";
-        case OP_ENOTFORMAT:
-            return "OP_ENOTFORMAT: This is not a valid Ogg Opus stream.";
-        case OP_EBADHEADER:
-            return "OP_EBADHEADER: A required header packet was not properly "
-                   "formatted.";
-        case OP_EVERSION:
-            return "OP_EVERSION: The ID header contained an unrecognised "
-                   "version number.";
-        case OP_EBADPACKET:
-            return "OP_EBADPACKET: An audio packet failed to decode properly.";
-        case OP_EBADLINK:
-            return "OP_EBADLINK: We failed to find data we had seen before or "
-                   "the stream was sufficiently corrupt that seeking is "
-                   "impossible.";
-        case OP_ENOSEEK:
-            return "OP_ENOSEEK: An operation that requires seeking was "
-                   "requested on an unseekable stream.";
-        case OP_EBADTIMESTAMP:
-            return "OP_EBADTIMESTAMP: The first or last granule position of a "
-                   "link failed basic validity checks.";
-        default:
-            return "Unknown error.";
-    }
-}
-
 
 void dl::Music::setLooping(bool looping)
 {
