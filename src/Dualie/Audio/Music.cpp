@@ -22,6 +22,12 @@ dl::Music::~Music()
 
 bool dl::Music::loadFromFile(std::string path)
 {
+    if (m_opusFile)
+    {
+        op_free(m_opusFile);
+        m_opusFile = nullptr;
+    }
+
     int error;
     m_opusFile = op_open_file(path.c_str(), &error);
     if (error)
@@ -33,22 +39,22 @@ bool dl::Music::loadFromFile(std::string path)
 
 void dl::Music::play()
 {
-    // Set the ndsp sound frame callback which signals our audioThread
+    if (!m_quit)
+    {
+        return;
+    }
+
     m_quit = false;
     ndspSetCallback(&dl::Music::callbackWrapper, this);
 
-    // Spawn audio thread
-
-    // Set the thread priority to the main thread's priority ...
     int32_t priority = 0x30;
     svcGetThreadPriority(&priority, CUR_THREAD_HANDLE);
-    // ... then add one to make it a lower priority
+
     priority += 1;
-    // ... finally, clamp it between 0x18 and 0x3F to guarantee that it's valid.
+
     priority = priority < 0x18 ? 0x18 : priority;
     priority = priority > 0x3F ? 0x3F : priority;
 
-    // Start the thread, passing our opusFile as an argument.
     m_threadId = threadCreate(&Music::threadWrapper, this,
                               THREAD_STACK_SZ, priority,
                               THREAD_AFFINITY, false);
