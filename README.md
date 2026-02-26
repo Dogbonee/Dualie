@@ -10,7 +10,7 @@ improvement, or bug fix implemented, create an issue or pull request and I'll do
 ### Documentation
 You can find the documentation for dualie [here](http://dogbonee.github.io/Dualie). Not many examples of the library currently exist,
 however you can see a port of tetris that made using the library [here](https://github.com/Dogbonee/3DS_Tetritime), as well as an implementation
-of John Conway's Game of Life [here](https://github.com/Dogbonee/GameOfLife_3DS).
+of John Conway's Game of Life [here](https://github.com/Dogbonee/GameOfLife_3DS). A small platformer demo using features such as sprites and audio can be found [here](https://github.com/Dogbonee/Dualie_Platformer).
 
 ### How to build
 DevkitPro is required to build this library. Dualie also depends on libopusfile and pkg-config, which can be installed through devkitPro's pacman package manager like so: 
