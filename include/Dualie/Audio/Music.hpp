@@ -13,7 +13,6 @@
 #include <thread>
 
 
-#define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
 namespace dl
 {
@@ -23,6 +22,7 @@ namespace dl
      */
     class Music
     {
+        uint8_t m_channel;
         ndspWaveBuf m_waveBufs[3];
         int16_t* m_audioBuffer = nullptr;
 
@@ -42,7 +42,7 @@ namespace dl
         static void threadWrapper(void* obj);
 
     public:
-        Music();
+        explicit Music(uint8_t channel);
         ~Music();
 
         /**

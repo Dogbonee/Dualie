@@ -23,11 +23,7 @@ dl::RenderWindow::RenderWindow() {
 
 
     ndspInit();
-    ndspChnReset(0);
     ndspSetOutputMode(NDSP_OUTPUT_STEREO);
-    ndspChnSetInterp(0, NDSP_INTERP_POLYPHASE);
-    ndspChnSetRate(0, Music::SAMPLE_RATE);
-    ndspChnSetFormat(0, NDSP_FORMAT_STEREO_PCM16);
 
     aptHook(&m_hookCookie, hookCallback, NULL);
 }

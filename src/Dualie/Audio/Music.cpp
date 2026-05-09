@@ -5,16 +5,21 @@
 #include <Dualie/Audio/Music.hpp>
 
 
-dl::Music::Music() : m_opusFile(nullptr)
+dl::Music::Music(uint8_t channel) : m_opusFile(nullptr), m_quit(true), m_channel(channel)
 {
     LightEvent_Init(&m_event, RESET_ONESHOT);
     allocateBuffers();
+
+    ndspChnReset(channel);
+    ndspChnSetInterp(channel, NDSP_INTERP_POLYPHASE);
+    ndspChnSetRate(channel, Music::SAMPLE_RATE);
+    ndspChnSetFormat(channel, NDSP_FORMAT_STEREO_PCM16);
 }
 
 dl::Music::~Music()
 {
     stop();
-    ndspChnReset(0);
+    ndspChnReset(m_channel);
     linearFree(m_audioBuffer);
     op_free(m_opusFile);
 }
@@ -45,7 +50,6 @@ void dl::Music::play()
     }
 
     m_quit = false;
-    ndspSetCallback(&dl::Music::callbackWrapper, this);
 
     int32_t priority = 0x30;
     svcGetThreadPriority(&priority, CUR_THREAD_HANDLE);
@@ -88,7 +92,7 @@ void dl::Music::audioThread()
 {
     while (!m_quit)
     {
-        for (size_t i = 0; i < ARRAY_SIZE(m_waveBufs); ++i)
+        for (size_t i = 0; i < std::size(m_waveBufs); ++i)
         {
             if (m_waveBufs[i].status != NDSP_WBUF_DONE)
             {
@@ -105,10 +109,9 @@ void dl::Music::audioThread()
                 return;
             }
         }
-        LightEvent_Wait(&m_event);
+        svcSleepThread(1000000);
     }
 }
-
 bool dl::Music::fillBuffer(ndspWaveBuf* waveBuf_)
 {
     // Decode samples until our waveBuf is full
@@ -139,7 +142,7 @@ bool dl::Music::fillBuffer(ndspWaveBuf* waveBuf_)
 
     // Pass samples to NDSP
     waveBuf_->nsamples = totalSamples;
-    ndspChnWaveBufAdd(0, waveBuf_);
+    ndspChnWaveBufAdd(m_channel, waveBuf_);
     DSP_FlushDataCache(waveBuf_->data_pcm16,
                        totalSamples * CHANNELS_PER_SAMPLE * sizeof(int16_t));
 
@@ -150,7 +153,7 @@ bool dl::Music::fillBuffer(ndspWaveBuf* waveBuf_)
 void dl::Music::allocateBuffers()
 {
     // Allocate audio buffer
-    const size_t bufferSize = WAVEBUF_SIZE * ARRAY_SIZE(m_waveBufs);
+    const size_t bufferSize = WAVEBUF_SIZE * std::size(m_waveBufs);
     m_audioBuffer = (int16_t*) linearAlloc(bufferSize);
     if (!m_audioBuffer)
     {
@@ -161,7 +164,7 @@ void dl::Music::allocateBuffers()
     memset(&m_waveBufs, 0, sizeof(m_waveBufs));
     int16_t* buffer = m_audioBuffer;
 
-    for (size_t i = 0; i < ARRAY_SIZE(m_waveBufs); ++i)
+    for (size_t i = 0; i < std::size(m_waveBufs); ++i)
     {
         m_waveBufs[i].data_vaddr = buffer;
         m_waveBufs[i].status = NDSP_WBUF_DONE;
@@ -173,9 +176,9 @@ void dl::Music::allocateBuffers()
 void dl::Music::reinitialize()
 {
     op_raw_seek(m_opusFile, 0);
-    ndspChnWaveBufClear(0);
+    ndspChnWaveBufClear(m_channel);
 
-    for (size_t i = 0; i < ARRAY_SIZE(m_waveBufs); ++i)
+    for (size_t i = 0; i < std::size(m_waveBufs); ++i)
     {
         m_waveBufs[i].status = NDSP_WBUF_DONE;
     }
